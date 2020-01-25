@@ -1,0 +1,47 @@
+---
+layout: default
+class: post
+---
+<article class="post-article">
+    {% include components/main/social-share.html %}
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center; margin-top: 15px;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8283643926060521"
+     data-ad-slot="3613276294"></ins>
+     <script>
+        (adsbygoogle = window.adsbygoogle || []).push({})
+    </script>
+    {{ content }}
+    <span class="tu-khoa">Keywords: </span>
+    {% for keyword in page.tag %}
+    {% for tag in site.data.tags %}
+    {% if keyword == tag.name %}
+    <a title="{{ tag.name }}" class="tags" href="{{ site.url }}/tag/{{ tag.slug }}">{{ tag.name }}</a>
+    {% endif %}
+    {% endfor %}
+    {% unless forloop.last %}<span>,</span>{% endunless %}
+    {% endfor %}
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;margin-top:30px;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8283643926060521"
+     data-ad-slot="3613276294"></ins>
+     <script>
+        (adsbygoogle = window.adsbygoogle || []).push({})
+     </script>
+    {% include components/main/related-post.html %}
+    {% if page.comments == true %}
+    <h2 id="binh-luan">Comments</h2>
+    <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="5" data-mobile="true" data-order-by="reverse_time" data-colorscheme="light"></div>
+    {% endif %}
+    <div class="button-control">
+        <svg>
+            <use xlink:href="#cog-solid">
+        </svg>
+    </div>
+    <div class="blure-control"></div>
+</article>
+{% include components/main/control-panel.html %}

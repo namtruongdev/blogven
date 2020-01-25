@@ -1,0 +1,35 @@
+<header class="hero-title">
+	{% if page.layout == "post" %}
+	<img alt="{{ page.title }}" src="{{ site.url }}/assets/img/{{ page.thumbnail }}">
+	<div class="hero-title-wrap">
+		<div class="cate">
+			{% for category in site.data.categories %}
+			{% if page.category == category.name %}
+			<a href="{{ site.url }}/{{ category.slug }}">{{ page.category }}</a>
+			{% endif %}
+			{% endfor %}
+			
+		</div>
+		<h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
+		{% assign au = site.data.authors[page.author] %}
+		<span class="author-post-wrap">Đăng bởi <a href="{{ au.facebook }}">{{ page.author }}</a></span>
+		
+		<time class="time-post">{{ page.date | date: "%d-%m-%Y" }}</time>
+		 {% capture time %}{{ content | reading_time }}{% endcapture %}
+		<span class="read-time">{{ time }} phút đọc</span>
+	</div>
+	{% endif %}
+	{% if page.layout == "category" or page.layout == "tag" %}
+		<img alt="{{ page.title }}" src="{{ site.url }}/assets/img/danh-muc-va-tu-khoa.jpg">
+	<div class="hero-title-wrap">
+		<h1><a href="{{ site.url }}{{ page.url }}">{% if page.category %}Chuyên mục: {{ page.category }}{% else %}Từ khóa: {{ page.tag }}{% endif %}</a></h1>
+		<p class="cate-seo-title">{{ page.seo_description }}</p>
+	</div>
+	{% endif %}
+	{% if page.layout == "archive" %}
+			<img alt="{{ page.title }}" src="{{ site.url }}/assets/img/dong-ho.jpg">
+	<div class="hero-title-wrap">
+		<h1><a href="{{ site.url }}{{ page.url }}">Lưu trữ bài viết - {{ page.date | date: "%Y" }}</a></h1>
+	</div>
+	{% endif %}
+</header>

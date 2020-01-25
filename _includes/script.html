@@ -1,0 +1,42 @@
+<script async src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        console.log("%c Hi Friend! %c", 'font-family: "Opens San", Helvetica, Arial, sans-serif;font-size:28px;color:#8a2124;-webkit-text-fill-color:#8a2124;-webkit-text-stroke: 1px #8a2124;', "font-size:12px;color:#999999;");
+    window.jQuery || document.write('<script src="jquery-3.4.1.min.js"><\/script>');
+    
+        (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+    ;c.parentNode.insertBefore(a,c)
+    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+     
+    galite('create', 'UA-123121912-4', 'auto', {
+        userId: 123121912
+    });
+    galite('set', 'transport', 'beacon');
+    galite('send', 'pageview');
+    window.addEventListener('unload', function() {
+    galite('send', 'timing', 'JS Dependencies', 'unload')
+    })
+    </script>
+    <script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
+    <script>
+        // Registration of service worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register("/sw.js").then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+else{
+    console.log('Service Workers not supported');
+}
+
+
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

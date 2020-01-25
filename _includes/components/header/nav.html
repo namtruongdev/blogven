@@ -1,0 +1,86 @@
+<section class="nav-container">
+    <div class="container-1140">
+    <!-- Website Logo -->
+    <div class="logo-container">
+        <a title="Home" href="{{ site.url }}">
+            <img alt="Home Lap Trinh Ban Than" src="{{ 'assets/img/laptrinhbanthandotcom-noel.png' | absolute_url }}">
+        </a>
+    </div>
+
+    <!-- Website Navigation -->
+    <nav class="navigation-container">
+        <ul>
+            <li>
+                <a title="Linux" href="{{ site.url }}/linux/">
+                    <svg><use xlink:href="#linux-brands"></svg>
+                    <span>LINUX</span>
+                </a>
+            </li>
+            <li>
+                <a title="Window" href="{{ site.url }}/window/">
+                    <svg><use xlink:href="#windows-brands"></svg>
+                    <span>WINDOW</span>
+                </a>
+            </li>
+            <li>
+                <a title="Learn programming" href="{{ site.url }}/hoc-lap-trinh">
+                    <svg><use xlink:href="#terminal-solid"></svg>
+                    <span>LEARN PROGRAMMING</span>
+                </a>
+            </li>
+            <li>
+                <a title="Tricks" href="{{ site.url }}/thu-thuat">
+                    <svg><use xlink:href="#mug-hot-solid"></svg>
+                    <span>TRICKS</span>
+                </a>
+            </li>
+            <li>
+                <a title="Life style" href="{{ site.url }}/phong-cach-song">
+                    <svg><use xlink:href="#procedures-solid"></svg>
+                    <span>LIFE STYLE</span>
+                </a>
+            </li>
+
+            <!-- Form tim kiem -->
+            <li class="li-search">
+                <form class="search-form" action="">
+                    <input aria-label="Search for that.." type="search" name="search" id="search" placeholder="Search for that.." maxlength="50" autocomplete="off" class="form-control">
+                </form>
+                
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search box -->
+    <div class="button-container">
+    <button aria-label="Search for that.." type="button" class="search-button">
+    <a aria-label="Search or exit" href="javascript:void(0)">
+        <svg class="sear">
+            <use xlink:href="#search-solid">
+        </svg>
+        <svg class="exit-2 hidden">
+            <use xlink:href="#times-solid">
+        </svg>
+    </a>
+</button>
+    <!-- This Button used click take action to show the Mobile navigation bar  -->
+    <button aria-label="Search for that.." type="button" class="bar-button">
+        <a aria-label="Menu or exit" href="javascript:void(0)">
+            <svg class="bar">
+                <use xlink:href="#bars-solid">
+            </svg>
+            <svg class="exit hidden">
+                <use xlink:href="#times-solid">
+            </svg>
+        </a>
+    </button>
+</div>
+    <div class="live-search-mb">
+        <form class="search-form" action="">
+            <input aria-label="Search for that.." type="search" name="search" id="search-mb" placeholder="Search for that.." maxlength="50" autocomplete="off" class="form-control">
+        </form>
+        <ul class="list-group" id="result-mb"></ul>
+    </div>
+    <ul class="list-group-dt" id="result"></ul>
+</div>
+</section>

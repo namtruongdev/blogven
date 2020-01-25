@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+<head>
+    {% include head.html %}
+</head>
+<body onload="checkCookie()" id="to-top">
+
+    <!--[if IE]>
+    <p class="browserupgrade">Bạn đang sử dụng trình duyệt <strong>quá cũ</strong>. Vui lòng <a href="https://browsehappy.com/">nâng cấp trình duyệt</a> trải nghiệm và bảo mật tốt hơn.</p>
+    <![endif]-->
+    {% include sprite-svg.html %}
+    {% include components/header/header.html %}
+
+    <main class="main-wrap">
+
+        <!-- Nội dung chính của website -->
+        <section class="main-content">
+            {{ content }}
+        </section>
+
+        <!-- Phần sidebar bên phải -->
+        <aside class="sidebar-container">
+
+            <!-- Container tiện ích -->
+            <div class="tools-container">
+
+                <!-- Tiêu đề flex -->
+                <div>
+                    <h2>
+                        <svg style="width: 20px;height: 20px;vertical-align: middle;"><use xlink:href="#tools-solid"></svg>
+                        <span>TOOLS</span>
+                    </h2>
+                </div>
+
+                <!-- Nội dung của container tiện ích -->
+                    <ol class="tools-list">
+                        {% for tool in site.data.tools %}
+                        <li>
+                            <a target="_blank" title="{{ tool.description }}" href="{{ site.url }}/loc-mail">
+                                <span class="">{{ tool.name }}</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ol>
+            </div>
+
+            <!-- Container danh mục -->
+            <div class="categories-container">
+
+                <!-- Tiêu đề danh mục -->
+                <div>
+                    <h2>
+                        <svg style="width: 20px;height: 20px;vertical-align: middle;"><use xlink:href="#folder-solid">
+                        </svg>
+                        <span>CATEGORIES</span>
+                    </h2>
+                </div>
+
+                
+                <ul class="categories-list">
+
+                <!-- Nọi dung của container danh mục -->
+                {% for category in site.data.categories %}
+                    <li>
+                        <a title="{{ category.name }}" href="{{ site.url }}/{{ category.slug }}">{{ category.name }}</a>
+                    </li>
+                {% endfor%}
+                </ul>
+                
+            </div>
+
+            <!-- Container luu tru -->
+            <div class="archive-container">
+
+                <!-- Tiêu đề danh mục -->
+                <div class="archive-title">
+                    <h2>
+                        <svg style="width: 20px;height: 20px;vertical-align: middle;"><use xlink:href="#server-solid">
+                        </svg>
+                        <span>ARCHIVES</span>
+                    </h2>
+                </div>
+
+                
+                <section class="archive-list">
+
+                <!-- Nọi dung của container lưu trữ -->
+                {% for archive in site.data.archives %}
+                <a title="{{ archive.description }}" href="{{ site.url }}/{{ archive.slug }}">{{ archive.name }}</a>
+                {% unless forloop.last %}<hr class="squiggle">{% endunless %}
+                {% endfor %}
+                </section>
+                
+            </div>
+
+            <!-- Nơi đặt quảng cáo 1 -->
+            <div class="adsene-1">
+                <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8283643926060521"
+                 data-ad-slot="2320908758"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+                 <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({})
+                 </script>
+            </div>
+
+            <!-- Nơi đặt quảng cáo 2 -->
+            <div class="adsene-2">
+                <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8283643926060521"
+                 data-ad-slot="2320908758"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+                 <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({})
+                 </script>
+            </div>
+
+        </aside>
+
+    </main>
+    {% include components/footer.html %}
+    {% include components/to-top.html %}
+    {% include script.html %}
+    {% if page.class == post %}
+    {% include facebook-sdk.html %}
+    {% endif %}
+    <div class="blure"></div>
+</body>
+</html>

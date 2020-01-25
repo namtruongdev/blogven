@@ -1,0 +1,58 @@
+    <aside class="control-panel">
+        <div class="ctrl-1">
+            <div class="ctrl-title-1">
+                <span>Personalized</span>
+                <span class="exit-ctrl">
+                    <svg>
+                        <use xlink:href="#times-solid">
+                    </svg>
+                </span>
+            </div>
+            <div class="person-customize">
+                <ul>
+                    <li>
+                        <!-- Dark mode -->
+                        <div class="customize-title" id="ctrol-cl-1">
+                            <span>
+                                <svg class="control-icon-list">
+                                    <use xlink:href="#moon-solid">
+                                </svg>
+                                <span>Dark theme</span></span>
+                            <span class="caret" id="caret-1">
+                                <svg>
+                                    <use xlink:href="#caret-down-solid">
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="content-des content-des-1">
+                            <div class="title-content-des">
+                                <span class="active-des">Active</span>
+                                <span class="on-off"><span class="toggle left-0"></span></span>
+                            </div>
+                            <p class="control-des">Dark themes keep you from eye strain when reading articles at night.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- Muc luc -->
+                        <div class="customize-title" id="ctrol-cl-2">
+                            <span>
+                                <svg class="control-icon-list">
+                                    <use xlink:href="#list-ol-solid">
+                                </svg>
+                                <span>Table of content</span>
+                            </span>
+                            <span class="caret" id="caret-2">
+                                <svg>
+                                    <use xlink:href="#caret-down-solid">
+                                </svg>
+                            </span></div>
+                        <div class="content-des content-des-2">
+                            {% include toc.html html=content sanitize=true class="inline_toc" id="my_toc" h_min=2 h_max=3 item_class="subitem-toc" %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="squiggle">
+        <div class="footer-control">Copyright &copy; 2019 Lap Trinh Ban Than</div>
+    </aside>

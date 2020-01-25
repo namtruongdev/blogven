@@ -1,0 +1,50 @@
+---
+layout: default
+class: tag
+---
+
+<figure class="post-container">
+    <!-- Lặp các bài viết qua plugin phân trang -->
+    {% for post in paginator.posts %}
+
+    <!-- Chỉ định biến author lấy dữ liệu từ file authors.yml -->
+    {% assign author = site.data.authors[post.author] %}
+    <article class="post-wrap">
+
+        <!-- Ảnh bìa bên trái -->
+        <div class="thumbnail-post-container">
+            {% assign path = 'assets/img' %}
+            {% responsive_image_block %} 
+                path: {{ path }}/{{ post.thumbnail }}
+                alt: {{ post.title }}
+            {% endresponsive_image_block %}
+            <a aria-label="{{ post.title }}" href="{{ site.url }}{{ post.url }}" title=""></a>
+        </div>
+
+        <!-- Phần thông tin bài viết bên phải -->
+        <div class="post-excerpt-container">
+
+            <!-- Tieeu để bài viết -->
+            <h2 class="scroll-animations hide">
+                <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </h2>
+
+            <!-- Trích dẫn một phần bài viết -->
+            <p class="scroll-animations hide">{{ post.excerpt | truncate: 130 }}</p>
+
+            <!-- Ảnh và thông tin tác giả, ngày tháng đăng bài -->
+            <div class="post-author-container scroll-animations hide">
+                <img src="https://laptrinhbanthan.com/assets/img/{{ author.image-64-64 }}" srcset="https://laptrinhbanthan.com/assets/img/{{ author.image-64-64 }} 2x, https://laptrinhbanthan.com/assets/img/{{ author.image-32-32}} 1x" alt="Tác giả" width="32px" height="32px">
+
+                <!-- Tên tác giả và ngày tháng đăng bài -->
+                <span>
+                    <a target="_blank" title="Tác giả" href="{{ author.facebook }}">{{ author.name }}</a>
+                    <time datetime="{{ post.date_modified }}">{{ post.date_modified }}</time>
+                </span>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+    <!-- Chèn phân trang tự đông -->
+{% include pagination.html %}
+</figure>

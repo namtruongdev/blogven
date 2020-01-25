@@ -1,0 +1,11 @@
+<header class="header-wrap">
+    {% include components/header/nav.html %}
+
+    <!-- Nếu front-master của index.html, class được chỉ định là home
+     thì sẽ thêm đoạn mã dưới -->
+    {% if page.class == "home" %}
+        {% include components/header/slogan.html %}
+     {% else %}
+        {% include components/header/hero-title.html %}
+     {% endif %}
+</header>

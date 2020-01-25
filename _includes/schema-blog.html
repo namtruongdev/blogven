@@ -1,0 +1,44 @@
+{% assign date_modified = page.date %}
+{% if page.date_modified %}
+  {% assign date_modified = page.date_modified %}
+{% endif %}
+{% assign logo = '/assets/img/laptrinhbanthandotcom-noel.png' %}
+
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "about": "{{ page.seo_description }}",
+      "articleBody": "{{ content | escape }}",
+      "author": {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "{{ page.author }}",
+        "affiliation": "Nam Truong",
+        "worksFor": "Nam Truong"
+      },
+      "dateCreated": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ date_modified | date_to_xmlschema }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "headline": "{{ page.title }}",
+      "inLanguage": "en-US",
+      "keywords": "{{ page.tag | join: ', ' }}",
+      "mainEntityOfPage": "{{ page.url | prepend: site.url }}",
+      "publisher": {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.name }}",
+        "logo": {
+          "@context": "http://schema.org",
+          "@type": "ImageObject",
+          "description": "Lap Trinh Ban Than - {{ site.description }}",
+          "height": "120px",
+          "url": "{{ logo | prepend: site.url }}",
+          "width": "634px"
+        }
+      },
+      "sourceOrganization": "{{ site.name }}",
+      "text": "{{ content | escape | textify }}",
+      "url": "{{ page.url | prepend: site.url }}"
+    }
+  </script>

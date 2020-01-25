@@ -1,0 +1,88 @@
+# Basic Info
+name: Lap Trinh Ban Than
+email: namtruongdev@gmail.com
+description: Cổng thông tin về Linux & Mã nguồn mở
+seo_description: Lập Trình Bản Thân là người bạn tốt. Tìm hiểu cách sử dụng công nghệ, tiện ích xung quanh bạn và khám phá những thứ hay ho trên Internet.
+baseurl: ""
+url: "http://localhost:3000"
+sass:
+  sass_dir: assets/styles
+
+# Gems
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-paginate-v2
+  - jekyll-archives
+  - liquid_reading_time
+  - jekyll-toc
+  - jekyll-responsive-image
+  - classifier-reborn
+# Exclude the following from the Jekyll build process.
+# Note: "vendor" is for Travis CI.
+exclude: ["vendor",
+          "_assets",
+          "Gemfile",
+          "Gemfile.lock",
+          "Gulpfile.js",
+          "node_modules",
+          "package.json",
+          "Rakefile",
+          "package-lock.json",
+          "markdown.style.rb"
+        ]
+
+# Languages and syntax highlighting
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+  wrap: true
+  syntax-highlighter: pygments
+
+# Include static pages.
+include: ["_pages"]
+
+# # Blog
+pagination:
+  enabled: true
+  permalink: /trang-:num/
+  per_page: 9
+  title: ":title (Trang :num)"
+  sort_reverse: true
+  trail: 
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page
+
+
+# Luu tru bai viet
+
+jekyll-archives:
+  enabled:
+    - year
+  layout: archive
+  permalinks:
+    year: '/:year/'
+
+# MUc luc
+toc:
+  min_level: 2
+  max_level: 3
+  no_toc_section_class: no_toc_section
+  list_class: section-nav
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: toc-
+
+responsive_image:
+  cache: true
+  strip: true
+  template: _includes/srcset.html
+  default_quality: 60
+  sizes:
+    - width: 100
+    - width: 150
+    - width: 300
+    - width: 500
+
+lsi: true

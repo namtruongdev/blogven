@@ -1,0 +1,19 @@
+scss_files: '_assets/styles/scss/*/*.scss'
+
+exclude:
+  - '_assets/styles/scss/*/*/*'
+  - '_assets/styles/scss/01-base/_normalize.scss'
+
+linters:
+  SelectorDepth:
+    enabled: false
+  NestingDepth:
+    enabled: false
+  VendorPrefix:
+    enabled: false
+  PlaceholderInExtend:
+    enabled: false
+  SelectorFormat:
+    enabled: false
+  Comment:
+    enabled: false

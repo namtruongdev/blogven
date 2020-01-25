@@ -1,0 +1,42 @@
+<article class="main-hero">
+
+    <!-- Chỉ lặp 1 bài viết mới nhất đầu tiên làm hero -->
+    {% for post in site.posts limit:1 %}
+
+    <!-- Chỉ định biến tác giả từ thư mục _data -->
+    {% assign author = site.data.authors[post.author] %}
+
+    <!-- Ảnh hero to đầu trang -->
+    <div class="hero-thumbnail">
+        {% assign path = 'assets/img' %}
+        {% responsive_image_block %}
+            path: {{ path }}/{{ post.thumbnail }}
+            alt: {{ post.title }}
+        {% endresponsive_image_block %}
+        <a aria-label="{{ post.title }}" href="{{ site.url }}{{ post.url }}" title=""></a>
+    </div>
+
+    <!-- Thông tin mô tả bài viết -->
+    <div class="hero-excerpt-container">
+        <h1 class="scroll-animations hide">
+            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </h1>
+
+        <!-- Trich đoạn bài viết -->
+        <p class="scroll-animations hide">{{ post.excerpt | truncate: 130 }}</p>
+
+        <!-- Thông tin tác giả và ngày tháng -->
+        <div class="hero-author-container scroll-animations hide">
+
+            <!-- Ảnh tác giả bên trái -->
+            <img src="assets/img/{{ author.image-64-64 }}" srcset="assets/img/{{ author.image-64-64 }} 2x, assets/img/{{ author.image-32-32}} 1x" alt="Tác giả">
+
+            <!-- Tên tác giả bên phải -->
+            <span>
+                <a target="_blank" title="Tác giả" href="{{ author.facebook }}">{{ author.name }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</article>

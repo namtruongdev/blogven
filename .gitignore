@@ -1,0 +1,12 @@
+# For Jekyll.
+_site
+.sass-cache
+tmp
+node_modules
+_assets
+
+# Ruby stuff
+.ruby-version
+
+.bundle
+vendor

@@ -1,0 +1,46 @@
+{% assign logo = '/assets/img/laptrinhbanthandotcom-noel.png' %}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ha Noi",
+      "addressRegion": "VN",
+      "postalCode": "143330",
+      "streetAddress": "Đuc Thang ward, Bac Tu Liem district"
+    },
+    "description": "{% if page.seo_description %}{{ page.seo_description }}{% else %}{{ site.seo_description }}{% endif %}",
+    "email": "hi@duongnamtruong.com",
+    "logo": {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "description": "Lap Trinh Ban Than - {{ site.description }}",
+      "height": "120px",
+      "url": "{{ logo | prepend: site.url }}",
+      "width": "634px"
+    },
+    "name": "Lap Trinh Ban Than",
+    "telephone": "0961.103.310",
+    "url": "{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}",
+    "sameAs": [
+      "https://www.facebook.com/lonelybaby99",
+      "https://www.facebook.com/laptrinhbanthandotcom",
+      "https://twitter.com/lonely_baby99",
+      "https://www.instagram.com/duongnamtruong99/"
+    ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.name }} - {{ site.description }}",
+    "url": "https://en.laptrinhbanthan.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://en.laptrinhbanthan.com/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+</script>

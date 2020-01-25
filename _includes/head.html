@@ -1,0 +1,236 @@
+
+    <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% elsif page.layout == 'category' or page.layout == 'tag' %}{% if page.category %}Category: {{ page.category }} - {{ site.name }}{% else %}Keyword: {{ page.tag }} - {{ site.name }}{% endif %}{% elsif page.layout == "archive" %}Archive of post - {{ page.date | date: "%Y" }} - {{ site.name }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}</title>
+    <link rel="alternate" hreflang="en-us"
+    href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+    <link rel="alternate" hreflang="x-default"
+    href="{{ page.url | replace:'index.html','' | prepend: 'https://laptrinhbanthan.com' }}" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="public">
+    <meta http-equiv="expires" content="86400">
+    <meta content="INDEX,FOLLOW" name="robots">
+    {% if page.path contains "_posts" %}
+    <meta property="article:publisher" content="https://www.facebook.com/laptrinhbanthandotcom" />
+    <meta property="article:author" content="https://www.facebook.com/lonelybaby99" />
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+    <meta property="article:modified_time" content="{% if page.date_modified %}{{ page.date_modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}" />
+    {% endif %}
+    <meta property="author" content="Nam Trường" />
+    <meta name="description" content="{% if page.seo_description %}{{ page.seo_description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.seo_description }}{% endif %}">
+    <link rel="canonical" hreflang="en-us" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    {% if page.amp %}
+    <link rel="amphtml" href="{{ site.url }}{{ page.amp }}">
+    {% endif %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href='{{ "/feed.xml" | prepend: site.url }}' />
+    <!-- Facebook Seo -->
+    {% if page.seo_description %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title | xml_escape }}{% elsif page.layout == 'category' or page.layout == 'tag' %}{% if page.category %}Chuyên mục: {{ page.category }}{% else %}Từ khóa: {{ page.tag }}{% endif %}{% else %}Lưu trữ bài viết - {{ page.date | date: '%Y' }}{% endif %}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ page.seo_description | xml_escape | truncate: 160 }}" />
+    <meta property="og:image" content="{% if page.thumbnail %}{{ site.url }}/assets/img/{{ page.thumbnail }}{% elsif page.layout == 'category' or page.layout == 'tag' %}{{ site.url }}/assets/img/danh-muc-va-tu-khoa.jpg{% else %}{{ site.url }}/assets/img/dong-ho.jpg{% endif %}" />
+    {% else %}
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ site.name | xml_escape }} - {{ site.description | xml_escape }}" />
+    <meta property="og:description" content="{{ site.seo_description | xml_escape | truncate: 160 }}" />
+    <meta property="og:image" content="{{ site.url }}/assets/img/laptrinhbanthan-seo.jpg" />
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:height" content="630" />
+<meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="fb:app_id" content="174766196750045" />
+    <meta property="fb:pages" content="838885076296704" />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% elsif page.layout == 'category' or page.layout == 'tag' %}{% if page.category %}Chuyên mục: {{ page.category }}{% else %}Từ khóa: {{ page.tag }}{% endif %}{% elsif page.layout == 'archive' %}Lưu trữ bài viết - {{ page.date | date: '%Y' }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.seo_description %}{{ page.seo_description | truncate: 160 }}{% else %}{{ site.seo_description | truncate: 160 }}{% endif %}">
+    <meta name="twitter:site" content="@lonely_baby99" />
+    <meta name="twitter:creator" content="@lonely_baby99">
+    <!-- Structured data. -->
+    {% if page.class == "home" or page.layout == 'arichive' or page.layout == 'tag' or page.layout == 'category' or page.layout == 'page' %}{% include schema-organization.html %}{% endif %}
+    {% if page.path contains "_posts" %}{% include schema-blog.html %}{% endif %}
+
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon" sizes="144x144">
+    <link rel="shortcut icon" href="{{ 'favicon-32.ico' | absolute_url }}" type="image/x-icon" sizes="32x32">
+    <link rel="shortcut icon" href="{{ 'favicon-16.ico' | absolure_url }}" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="{{ 'icon-16.png' | absolute_url }}" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{ 'icon-32.png' | absolute_url }}" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="{{ 'apple-touch-icon-180.png' | absolute_url }}" sizes="180x180">     	
+    <meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolure_url }}">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="preload" href="{{ 'assets/styles/main.css' | absolute_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:600,700&display=swap&subset=vietnamese" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!--  Trường hợp javascript không được bật -->
+    <noscript>
+        <link rel="stylesheet" href="{{ 'assets/styles/main.css' | absolute_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:600,700&display=swap&subset=vietnamese" rel="stylesheet"> 
+    </noscript>
+    <script>
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    /* This file is meant as a standalone workflow for
+    - testing support for link[rel=preload]
+    - enabling async CSS loading in browsers that do not support rel=preload
+    - applying rel preload css once loaded, whether supported or not.
+    */
+    (function(w) {
+        "use strict";
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function() {};
+        }
+        // define on the loadCSS obj
+        var rp = loadCSS.relpreload = {};
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function() {
+            var ret;
+            try {
+                ret = w.document.createElement("link").relList.supports("preload");
+            } catch (e) {
+                ret = false;
+            }
+            return function() {
+                return ret;
+            };
+        })();
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function(link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || "all";
+
+            function enableStylesheet() {
+                // unbind listeners
+                if (link.addEventListener) {
+                    link.removeEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.detachEvent("onload", enableStylesheet);
+                }
+                link.setAttribute("onload", null);
+                link.media = finalMedia;
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener("load", enableStylesheet);
+            } else if (link.attachEvent) {
+                link.attachEvent("onload", enableStylesheet);
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function() {
+                link.rel = "stylesheet";
+                link.media = "only x";
+            });
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000);
+        };
+
+        // loop through link elements in DOM
+        rp.poly = function() {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return;
+            }
+            var links = w.document.getElementsByTagName("link");
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                // qualify links to those with rel=preload and as=style attrs
+                if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                    // prevent rerunning on link
+                    link.setAttribute("data-loadcss", true);
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link);
+                }
+            }
+        };
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly();
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500);
+            if (w.addEventListener) {
+                w.addEventListener("load", function() {
+                    rp.poly();
+                    w.clearInterval(run);
+                });
+            } else if (w.attachEvent) {
+                w.attachEvent("onload", function() {
+                    rp.poly();
+                    w.clearInterval(run);
+                });
+            }
+        }
+
+
+        // commonjs
+        if (typeof exports !== "undefined") {
+            exports.loadCSS = loadCSS;
+        } else {
+            w.loadCSS = loadCSS;
+        }
+    }(typeof global !== "undefined" ? global : this));
+    loadCSS("{{ 'assets/styles/main.css' | absolute_url }}");
+    loadCSS("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:600,700&display=swap&subset=vietnamese");
+    </script>
+    <!-- kết nối trước -->
+    <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://staticxx.facebook.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://adservice.google.com.vn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://googleleads.g.doubleclick.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://www.facebook.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://static.xx.fbcdn.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://e.dlx.addthis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://ag.innovid.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cms.quantserve.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://image6.pubmatic.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://pixel.rubiconproject.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://d.agkn.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cm.g.doubleclick.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://odr.mookie1.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://rtb.openx.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fcmatch.youtube.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fcmatch.google.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://ssum-sec.casalemedia.com" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" async>
+    <style>
+    {% if page.class == "home" %}
+    {% include critical.css %}
+    {% else %}
+    {% include critical-post.css %}
+    {% endif %}
+    </style>
+    <script>document.documentElement.classList.remove("no-js")</script>
+    <meta name="theme-color" content="#f0f0f0">
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123121912-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123121912-4');
+    </script>
+
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+</script>
+<![endif]-->

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Email Filter",
+    "slug": "loc-mail",
+    "description": "Separate emails from a string"
+  },
+  {
+    "name": "Encode & Decode",
+    "slug": "de4js",
+    "description": "Decode JavaScript"
+  }
+]

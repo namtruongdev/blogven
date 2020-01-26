@@ -70,7 +70,7 @@ $(document).ready(function() {
     var searchField = $("#search").val();
     var expression = new RegExp(searchField, "i");
 
-    $.getJSON("https://laptrinhbanthan.com/api/search.json", function(data) {
+    $.getJSON("https://en.laptrinhbanthan.com/api/search.json", function(data) {
       $.each(data, function(key, value) {
 
         if (searchField.length == 0) {
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
         else if (value.title.search(expression) != -1 || value.image.search(
           expression) != -1 || value.author.search(expression) != -1 || value.date.search(expression) != -1 || value.excerpt.search(expression) != -1) {
-          $("#result").append('<li class="list-group-item"><img src="https://laptrinhbanthan.com/assets/img/'+ value.image+'" style="width: 100%; max-width: 60px;" /> <h2><a href='+ value.url +' title="'+ value.title +'">'+ value.title +'</a></h2></li><hr class="squiggle">');
+          $("#result").append('<li class="list-group-item"><img src="https://en.laptrinhbanthan.com/assets/img/'+ value.image+'" style="width: 100%; max-width: 60px;" /> <h2><a href='+ value.url +' title="'+ value.title +'">'+ value.title +'</a></h2></li><hr class="squiggle">');
         }
 
       });
@@ -98,7 +98,7 @@ $(document).ready(function() {
     var searchField = $("#search-mb").val();
     var expression = new RegExp(searchField, "i");
 
-    $.getJSON("https://laptrinhbanthan.com/api/search.json", function(data) {
+    $.getJSON("https://en.laptrinhbanthan.com/api/search.json", function(data) {
       $.each(data, function(key, value) {
 
         if (searchField.length == 0) {
@@ -107,7 +107,7 @@ $(document).ready(function() {
 
         else if (value.title.search(expression) != -1 || value.image.search(
           expression) != -1 || value.author.search(expression) != -1 || value.date.search(expression) != -1 || value.excerpt.search(expression) != -1) {
-          $("#result-mb").append('<li class="list-group-item"><img src="https://laptrinhbanthan.com/assets/img/'+value.image+'" style="width: 100%; min-width: 125px;max-width: 125px;" /> <h2><a href='+ value.url +' title="'+ value.title +'">'+ value.title +'</a></h2></li>');
+          $("#result-mb").append('<li class="list-group-item"><img src="https://en.laptrinhbanthan.com/assets/img/'+value.image+'" style="width: 100%; min-width: 125px;max-width: 125px;" /> <h2><a href='+ value.url +' title="'+ value.title +'">'+ value.title +'</a></h2></li>');
         }
 
       });
@@ -354,6 +354,6 @@ function checkCookie() {
 
    } 
       else {
-     console.log("Chế độ tối đã bị tắt!");
+     console.log("Dark mode was disabled!");
      }
 }

@@ -22,7 +22,7 @@ var CACHE_NAME = 'laptrinhbanthan-v1';
 // Do nothing if it's either an AMP page (as these are served via Googles cache) or the blog page
 // Fallback to the offline pages for these
 {% for page in site.pages %}
-  {% if page.path contains 'amp' or page.path contains 'blog' %}
+  {% if page.path contains 'amp' %}
   {% else if %}
     urlsToCache.push("{{ page.url }}")
   {% endif %}

@@ -12,11 +12,11 @@
 		</div>
 		<h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
 		{% assign au = site.data.authors[page.author] %}
-		<span class="author-post-wrap">Đăng bởi <a href="{{ au.facebook }}">{{ page.author }}</a></span>
+		<span class="author-post-wrap">By <a href="{{ au.facebook }}">{{ page.author }}</a></span>
 		
 		<time class="time-post">{{ page.date | date: "%d-%m-%Y" }}</time>
 		 {% capture time %}{{ content | reading_time }}{% endcapture %}
-		<span class="read-time">{{ time }} phút đọc</span>
+		<span class="read-time">{{ time }} minutes read</span>
 	</div>
 	{% endif %}
 	{% if page.layout == "category" or page.layout == "tag" %}

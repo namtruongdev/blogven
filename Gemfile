@@ -7,11 +7,12 @@ gem 'jekyll-sitemap'
 gem 'mdl'
 gem 'travis'
 gem 'jekyll-paginate-v2'
-gem 'jekyll'
+gem "jekyll", ">= 3.6.3"
 gem 'jekyll-archives'
 gem 'liquid_reading_time'
 gem 'jekyll-toc'
 gem 'jekyll-responsive-image'
+gem "nokogiri", ">= 1.10.4"
 gem "rake", "~> 12"
 group :jekyll_plugins do
    gem "jekyll-paginate-v2"

@@ -36,7 +36,7 @@
                     <ol class="tools-list">
                         {% for tool in site.data.tools %}
                         <li>
-                            <a target="_blank" title="{{ tool.description }}" href="{{ site.url }}/loc-mail">
+                            <a target="_blank" title="{{ tool.description }}" href="{{ site.url }}/{{ tool.slug }}">
                                 <span class="">{{ tool.name }}</span>
                             </a>
                         </li>

@@ -1,0 +1,127 @@
+@import '../../mixin';
+@import '../variable';
+
+.nav-container {
+    -webkit-box-flex: 0;
+            flex: 0 0 calc(100% - 231.333px);
+    display: -webkit-box;
+    display: flex;
+    height: 100%;
+    min-height: 60px;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    background: var(--primary-navigation-background-color);
+    background: url(https://laptrinhbanthan.com/assets/img/top-banner.png) no-repeat center top/auto;
+    .container-1140 {
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+        display: -webkit-box;
+        display: flex;
+        position: relative;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+    .logo-container {
+        -webkit-box-flex: 0;
+        flex            : 0 0 231.333px;
+        padding         : 9px 15px 7px 13px;
+        height          : 100%;
+        min-height      : 60px;
+        a {
+            color: var(--primary-color);
+            img {
+                height: 40px;
+            }
+        }
+    }
+    ul {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: end;
+                justify-content: flex-end;
+        .search-form {
+            padding: 0 15px 0 10px;
+        #search {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+        li {
+            display: -webkit-box;
+            display: flex;
+            height: 100%;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                    align-items: center;
+            min-height: 60px;
+            &:first-child {
+                border-left: 1px solid $primary-border-color;
+            }
+            a {
+                color: var(--primary-color);
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                        flex-flow: column;
+                font-size: $medium;
+                padding: 5px 15px;
+                border-right: 1px solid $primary-border-color;
+                -webkit-box-align: center;
+                        align-items: center;
+                height: 100%;
+                min-height: 60px;
+                text-align: center;
+                -webkit-box-pack: center;
+                        justify-content: center;
+                        letter-spacing: 1px;
+                svg {
+                    width: 28px;
+                    padding-bottom: 5px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+    .button-container {
+        display: -webkit-box;
+        display: flex;
+        display: none;
+    .bar-button {
+        background: transparent;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid $primary-border-color;
+        padding: 15px 15.5px 17px 15.5px;
+        cursor: pointer;
+        a {
+            
+            svg {
+                width: 28px;
+                color: $primary-color;
+                height: 28px;
+            }
+        }
+    }
+    .search-button {
+        background: transparent;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        padding: 15px 15.5px 20px 15.5px;
+        border-left: 1px solid $primary-border-color;
+        cursor: pointer;
+        a {
+            svg {
+                width: 26px;
+                color: $primary-color;
+                height: 26px;
+            }
+        }
+    }
+
+}
+}
+}

@@ -3,7 +3,7 @@ _site
 .sass-cache
 tmp
 node_modules
-_assets
+assets
 
 # Ruby stuff
 .ruby-version

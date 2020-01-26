@@ -1,0 +1,34 @@
+@import 'scss/01-base/normalize';
+@import 'scss/01-base/responsive';
+@import 'scss/01-base/reset';
+@import 'scss/01-base/flex';
+@import 'scss/03-components/header/header';
+@import 'scss/03-components/main/main';
+@import 'scss/sprity';
+@import 'scss/03-components/candy-loader';
+
+body {
+      &::before {
+      content: '';
+      display: block;
+      width: 360px;
+      height: 1440px;
+      position: absolute;
+      top: 310px;
+      left: -255px;
+      background: url("https://laptrinhbanthan.com/assets/img/left.png") no-repeat;
+      background-size: cover;
+    }
+      &::after {
+      content: '';
+      display: block;
+      width: 344px;
+      height: 1323px;
+      position: absolute;
+      top: 310px;
+      right: -240px;
+      background: url("https://laptrinhbanthan.com/assets/img/right.png") no-repeat;
+      background-size: cover;
+    }
+}
+

@@ -1,0 +1,17 @@
+@import '../../mixin';
+
+.navigation-container {
+	ul {
+		li {
+			&:hover, &:focus, &:active {
+				@include primary-background-color(.2);
+			}
+			a {
+
+			}
+		}
+	}
+}
+.funky-animations {
+	display: inline-block;
+}

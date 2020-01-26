@@ -1,0 +1,28 @@
+@import '../03-components/variable';
+
+.main-wrap {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-flow: row wrap;
+	padding: 15px 15px 30px 15px;
+	max-width: 1140px;
+	margin: 10px auto 10px auto;
+	background: var(--lightbg-main);
+	z-index: 99;
+	position: relative;
+
+	.main-content {
+		-webkit-box-flex: calc(100% - 335px);
+		        flex: calc(100% - 335px);
+		padding: 0 15px 0 0;
+		overflow: hidden;
+	}
+	.sidebar-container {
+		-webkit-box-flex: 335px;
+		        flex: 335px;
+	    padding: 0 0 0 15px;
+	    overflow: hidden;
+	}
+}

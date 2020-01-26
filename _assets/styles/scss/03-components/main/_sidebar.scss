@@ -1,0 +1,195 @@
+@import '../variable';
+
+.sidebar-container {
+
+	.tools-container, .categories-container, .archive-container {
+
+		margin-bottom: 30px;
+		div {
+			margin-bottom: 20px;
+			position: relative;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			overflow: hidden;
+			&::before {
+				content: '';
+				width: 100%;
+				height: 1px;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: var(--bcl);
+			}
+			h2 {
+				font-family: $primary-font-family;
+				margin: 0;
+				line-height: 1;
+				color: var(--primary-color);
+				background: url("https://laptrinhbanthan.com/assets/img/bg-news.png");
+				background-repeat: no-repeat;
+				padding: 7px 20px 7px 10px;
+				font-weight: 600;
+				width: 195px;
+				position: relative;
+				&::after {
+					content: '';
+					width: 0;
+					height: 0;
+					position: absolute;
+					bottom: 0;
+					top: 0;
+					right: 0;
+					border-right: 12px solid var(--beforebg-main);
+					border-top: 22.5px solid var(--beforebg-main);
+					border-bottom: 22.5px solid transparent;
+					border-left: 12px solid transparent;
+				}
+			}
+		}
+	}
+}
+.tools-list {
+	margin: 0;
+	padding: 0;
+	font-family: $second-font-family;
+	counter-reset: dem;
+	li {
+		display: inline-block;
+		background: #131e25;
+		overflow: hidden;
+		padding: 5px 10px 5px 35px;
+		border-radius: 50px;
+		position: relative;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		&:hover, &:focus, &:active {
+			background: var(--primary-hover-color);
+			&::before {
+				-webkit-transform: rotate(360deg);
+				        transform: rotate(360deg);
+				-webkit-transition: -webkit-transform .5s ease-in-out;
+				transition: -webkit-transform .5s ease-in-out;
+				transition: transform .5s ease-in-out;
+				transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out; 
+			}
+		}
+		&::before {
+			counter-increment: dem;
+			content: counters(dem, "");
+			background: var(--lightbg-main-3);
+			border-radius: 50%;
+			position: absolute;
+			color: #fff;
+			top: -3px;
+			left: -5px;
+			width: 35px;
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex;
+			height: 35px;
+			-webkit-box-align: center;
+			        -ms-flex-align: center;
+			    align-items: center;
+			-webkit-box-pack: center;
+			        -ms-flex-pack: center;
+			    justify-content: center;
+			border: 5px solid var(--beforebg-main);
+		}
+		a {
+			color: #fff;
+			line-height: 1;
+			vertical-align: top;
+		}
+	}
+}
+.categories-list {
+	font-family: $second-font-family;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: wrap;
+	    flex-flow: wrap;
+	li {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        -ms-flex-flow: row wrap;
+		    flex-flow: row wrap;
+		a {
+			color: #fff;
+			margin: 0 8px 8px 10px;
+			padding: 3px 10px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+			text-transform: uppercase;
+			position: relative;
+			background: #131e25;
+			&::before {
+			content: '';
+			width: 0;
+			height: 0;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -10px;
+			border-right: 10px solid var(--lightbg-main-2);
+			border-top: 12.2px solid transparent;
+			border-bottom: 12.2px solid transparent;
+		}
+			&::after {
+			content: '';
+			width: 5px;
+			height: 5px;
+			display: block;
+			position: absolute;
+			background: var(--lightcl);
+			border-radius: 50%;
+			-webkit-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			top: 50%;
+			left: -2.5px;
+			}
+		}
+	}
+}
+
+.adsene-1, .adsene-2 {
+	height: auto;
+	width: 100%;
+}
+.adsene-1 {
+	margin-bottom: 30px;
+}
+.adsene-2 {
+}
+
+.archive-list {
+padding-left: 25px;
+font-family: $second-font-family;
+
+	a:hover, a:focus, a:active {
+		color: var(--cl);
+	}
+
+	a {
+			color: #222;
+			padding: 10px 0;
+			display: block;
+			position: relative;
+			&::before {
+				display: block;
+				content: '';
+				width: 10px;
+				height: 10px;
+				background: var(--cl);
+				position: absolute;
+				left: -20px;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				        transform: translateY(-50%);
+			}
+		}
+}

@@ -1,0 +1,20 @@
+@import '../color';
+@import '../variable';
+
+.categories-list {
+	li {
+
+		a {
+				&:hover, &:focus, &:active {
+					background: var(--primary-hover-color);
+					-webkit-transition: background $default-transition-link;
+					transition: background $default-transition-link;
+				&::before {
+					border-right-color: var(--lightbg-main-3);
+					-webkit-transition: border-right-color $default-transition-link;
+					transition: border-right-color $default-transition-link;
+				}
+			}
+		}
+	}
+}

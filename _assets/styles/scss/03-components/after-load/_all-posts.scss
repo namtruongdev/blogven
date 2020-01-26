@@ -1,0 +1,59 @@
+.tu-khoa {
+	font: {
+		weight: bold;
+		size: .875em;
+	}
+}
+
+.tags {
+	font: {
+		weight: 400 !important;
+		size: .875em;
+	}
+}
+
+.related-post {
+	display      : -webkit-box;
+	display      : -ms-flexbox;
+	display      : flex;
+	margin-top   : 30px;
+	-ms-flex-flow: wrap;
+	flex-flow    : wrap;
+
+	.related-item {
+		display              : -webkit-box;
+		display              : -ms-flexbox;
+		display              : flex;
+		width                : 33.3333333%;
+		-webkit-box-orient   : vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-flow        : column;
+		flex-flow            : column;
+		padding              : 10px;
+
+		#relatedImage {
+			width         : 100%;
+			display       : block;
+			position      : relative;
+			height        : 0;
+			overflow      : hidden;
+			padding-bottom: 60%;
+			border-radius : 5px;
+			margin-bottom : 5px;
+
+			img {
+				-o-object-fit: cover;
+				object-fit   : cover;
+				position     : absolute;
+				top          : 0;
+				left         : 0;
+				width        : 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+.fb-comments {
+	width: 100%;
+}

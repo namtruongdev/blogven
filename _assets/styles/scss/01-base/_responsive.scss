@@ -1,0 +1,596 @@
+@import '../03-components/variable';
+
+@media (max-width: 992px) {
+	.main-wrap {
+		-webkit-box-orient   : vertical !important;
+		-webkit-box-direction: normal !important;
+		-ms-flex-flow            : column !important;
+		    flex-flow            : column !important;
+		.main-content {
+			-webkit-box-flex: 0;
+			-ms-flex            : 0 0 100%;
+			    flex            : 0 0 100%;
+			max-width       : 760px;
+			margin          : 0 auto;
+			padding         : 0 !important;
+		}
+		.sidebar-container {
+			-webkit-box-flex: 0 !important;
+			-ms-flex            : 0 0 100% !important;
+			    flex            : 0 0 100% !important;
+			display         : -webkit-box;
+			display         : -ms-flexbox;
+			display         : flex;
+			-ms-flex-wrap       : wrap;
+			    flex-wrap       : wrap;
+			-ms-flex-line-pack   : start;
+			    align-content   : flex-start;
+			padding         : 0 !important;
+			margin-top      : 30px;
+			.tools-container {
+				width        : 50%;
+				padding-right: 15px;
+			}
+			.categories-container {
+				width       : 50%;
+				padding-left: 15px;
+			}
+			.archive-container {
+				width: 100%;
+			}
+			.adsene-1 {
+				width: 100%;
+			}
+			.adsene-2 {
+				width: 100%;
+			}
+
+		}
+	}
+	.hero-title-wrap {
+		padding  : 60px 15px 30px 15px !important;
+		max-width: 760px !important;
+	}
+}
+@media (max-width: 664px) {
+	.post-excerpt-container {
+		-webkit-box-flex: 0 !important;
+		-ms-flex            : 0 0 75% !important;
+		    flex            : 0 0 75% !important;
+		padding         : 0 0 0 15px !important;
+	}
+	.thumbnail-post-container {
+		-webkit-box-flex: 0 !important;
+		        -ms-flex: 0 0 25% !important;
+		    flex: 0 0 25% !important;
+		&::before {
+			display: none !important;
+		}
+	}
+	.tools-container, .categories-container, .archive-container {
+		width: 100% !important;
+	}
+	.tools-container {
+		padding-right: 0 !important;
+	}
+	.categories-container {
+		padding-left: 0 !important;
+	}
+}
+@media (min-width: 665px) {
+	.hero-excerpt-container {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background: $primary-color;
+		width: 55%;
+		padding: 0 0 0 30px;
+		&::before {
+			content: '';
+			width: calc(100% - 30px);
+			height: 30px;
+			position: absolute;
+			top: -30px;
+			right: 0;
+			background: var(--beforebg-hero);
+		}
+		&::after {
+			content: '';
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: -30px;
+			left: 0;
+			border-right: 30px solid var(--beforebg-hero);
+			border-bottom: 30px solid transparent;
+			border-top: 30px solid transparent;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.post-excerpt-container {
+		p {
+			display: none !important;
+		}
+	}
+	.slogan-container {
+		h2 {
+			a {
+				font-size: 1.25em !important;
+			}
+		}
+		p {
+			font-size: 1em !important;
+		}
+	}
+	.container-1140-foot {
+		-webkit-box-orient   : vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction       : column;
+		    flex-direction       : column;
+		-webkit-box-pack     : center;
+		-ms-flex-pack      : center;
+		    justify-content      : center;
+		text-align           : center;
+		.copyright {
+			padding-bottom: 20px;
+			position: relative;
+			&::before {
+				content   : '';
+				width     : 100%;
+				height    : 5px;
+				border    : 0;
+				background: url("https://laptrinhbanthan.com/assets/img/squiggle.svg") repeat-x;
+				display   : block;
+				position  : absolute;
+				bottom    : 0;
+				left      : 0;
+			}
+		}
+		.social-icon-footer {
+			padding         : 20px 0;
+			-webkit-box-pack: center !important;
+			-ms-flex-pack : center !important;
+			    justify-content : center !important;
+		}
+	}
+}
+@media (max-width: 378px) {
+	.slogan-container {
+		h2 {
+			a {
+				font-size: 1.125em !important;
+			}
+		}
+		p {
+			font-size: .875em !important;
+		}
+	}
+	.post-excerpt-container {
+		h2 {
+			font-size: 1.125em !important;
+		}
+	}
+	.bar-button a svg {
+		width: 22px !important;
+		height: 22px !important;
+	}
+	.search-button a svg {
+		width: 20px !important;
+		height: 20px !important;
+	}
+	.search-button {
+		padding: 20px 15px !important;
+	}
+}
+@media (max-width: 355px) {
+	.logo-container {
+		padding: 15px 15px 7px 13px !important;
+		-webkit-box-flex: 0 !important;
+		        -ms-flex: 0 0 180px !important;
+		    flex: 0 0 180px !important;
+		a {
+			img {
+				height: 30px !important;
+			}
+		}
+	}
+	.copyright {
+		font-size: .875em !important;
+	}
+	.slogan-container h2 a {
+		font-size: 1.0625em !important;
+	}
+}
+@media (max-width: 320px) {
+	.post-author-container {
+		display: none !important;	
+	}
+	.live-search-mb {
+		.list-group {
+			img {
+				max-width: 100px !important;
+				min-width: 100px !important;
+			}
+			h2 {
+				font-size: 1em !important;
+			}
+		}
+	}
+	.cate-seo-title {
+		font-size: 1em !important;
+	}
+}
+@media (max-width: 1010px) {
+	
+		.nav-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			max-height: 60px;
+			z-index: 999999;
+			background: var(--third-color) !important;
+		.navigation-container {
+			display: none;
+			position: absolute;
+			top: 60px;
+			right: 0;
+			width: 100%;
+			background: var(--third-color);
+			border-top: 1px solid $primary-border-color;
+			padding: 15px 0;
+			ul {
+				display: -webkit-box !important;
+				display: -ms-flexbox !important;
+				display: flex !important;
+				-ms-flex-flow: wrap;
+				    flex-flow: wrap;
+				-webkit-box-pack: start !important;
+				        -ms-flex-pack: start !important;
+				    justify-content: flex-start !important;
+				-webkit-box-align: start;
+				        -ms-flex-align: start;
+				    align-items: flex-start;
+				width: 100%;
+				&:hover, &:focus, &:active {
+					li {
+						a {
+							svg {
+								-webkit-transition: color $default-transition-link;
+								transition: color $default-transition-link;
+							}
+						}
+						&:nth-child(1) a svg {
+							color: #ff8a00;
+						}
+						&:nth-child(2) a svg {
+							color: #e52e71;
+						}
+						&:nth-child(3) a svg {
+							color: #f44336;
+						}
+						&:nth-child(4) a svg {
+							color: #9c27b0;
+						}
+						&:nth-child(5) a svg {
+							color: #4caf50;
+						}
+					}
+				}
+				& > li {
+					width: 33.333333% !important;
+					height: 100px !important;
+
+					a {
+						border: none !important;
+						svg {
+							width: 42px !important;
+							height: 42px !important;
+						}
+					}
+				}
+			}
+		}
+		.button-container {
+			display: -webkit-box !important;
+			display: -ms-flexbox !important;
+			display: flex !important;
+			-ms-flex-flow: nowrap;
+			    flex-flow: nowrap;
+		}
+	}
+	.slogan-container {
+		margin-top: 60px;
+	}
+	.blure {
+		background: rgba(0,0,0, .8);
+		display: none;
+		position: fixed;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		height: 100vh;
+	}
+	.list-group-dt {
+		display: none !important;
+	}
+	.hero-title {
+		margin-top: 60px;
+	}
+
+}
+@media (min-width: 921px) {
+	.li-search {
+		input {
+			border-radius: 5px;
+			padding: 5px 0px 5px 25px;
+			background: url("https://laptrinhbanthan.com/assets/img/search-ic.png") no-repeat;
+			overflow: hidden;
+			background-color: #fff;  
+			text-align: left;
+			background-position: 5px center;
+			border: none;
+		}
+	}
+	.list-group-dt {
+		position             : absolute;
+		top                  : 60px;
+		right                : 0;
+		display              : -webkit-box;
+		display              : -ms-flexbox;
+		display              : flex;
+		-webkit-box-orient   : vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-flow            : column;
+		    flex-flow            : column;
+		background           : #fff;
+		-webkit-box-pack     : start;
+		-ms-flex-pack      : start;
+		    justify-content      : flex-start;
+		-webkit-box-align    : start;
+		-ms-flex-align          : start;
+		    align-items          : flex-start;
+		z-index              : 999;
+		width                : 100%;
+		max-width            : 320px;
+		li:nth-child(1) {
+			border-left: none !important;
+		}
+		li {
+			padding          : 0 15px;
+			width            : 100%;
+			display          : -webkit-box;
+			display          : -ms-flexbox;
+			display          : flex;
+			-webkit-box-align: center !important;
+			-ms-flex-align      : center !important;
+			    align-items      : center !important;
+			-webkit-box-pack : start !important;
+			-ms-flex-pack  : start !important;
+			    justify-content  : flex-start !important;
+			&:hover, &:focus, &:active {
+					background: rgba(0,0,0,.2);
+					-webkit-transition: background $default-transition-link;
+					transition: background $default-transition-link;
+				}
+			img {
+				border-radius: 5px;
+			}
+			h2 {
+		color: #000 !important;
+		font-size: 1em !important;
+		margin: 0 !important;
+				a {
+		color: #000 !important;
+
+
+					border: none !important;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1010px) {
+
+	.live-search-mb {
+		position: fixed !important;
+		left: 0;
+		overflow-y: auto;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+		background: rgba(0,0,0,.9);
+		top: 60px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		        -ms-flex-pack: center;
+		    justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        -ms-flex-flow: column;
+		    flex-flow: column;
+		.search-form {
+			padding: 15px;
+			input {
+				width: 100% !important;
+				border-radius: 5px;
+			padding: 5px 0px 5px 30px;
+			background: url(https://laptrinhbanthan.com/assets/img/search-ic.png) no-repeat;
+			overflow: hidden;
+			background-color: #fff;  
+			text-align: left;
+			background-position: 10px center;
+			border:none;
+
+			}
+		}
+		.list-group {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			        -ms-flex-flow: column wrap;
+			    flex-flow: column wrap;
+			-webkit-box-pack: start;
+			        -ms-flex-pack: start;
+			    justify-content: flex-start;
+			-webkit-box-align: start;
+			        -ms-flex-align: start;
+			    align-items: flex-start;
+			padding-bottom: 60px;
+			li:nth-child(1) {
+				border-left: none !important;
+			}
+			li {
+				border-bottom: 1px solid rgba(255,255,255,.3);
+				padding: 15px;
+				width: 100%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: start !important;
+				        -ms-flex-pack: start !important;
+				    justify-content: flex-start !important;
+				-webkit-box-align: start !important;
+				        -ms-flex-align: start !important;
+				    align-items: flex-start !important;
+				text-align: left;
+				&:hover, &:focus, &:active {
+					background: var(--primary-hover-color);
+					-webkit-transition: background $default-transition-link;
+					transition: background $default-transition-link;
+				}
+				img {
+					border-radius: 5px;
+				}
+				h2 {
+					margin: 0;
+					font-size: 1.25em;
+					line-height: 1.2em;
+				a {
+					border: none !important;
+				}
+			}
+			}
+		}
+	}
+
+}
+.live-search-mb {
+	display: none;
+}
+@media (max-width: 1300px) {
+	.santa-hero {
+		display: none !important;
+	}
+	.header-wrap::after {
+		display: none !important;
+	}
+}
+@media (max-width: 1210px) {
+	.hero-title {
+		&::before {
+			display: none;
+		}
+		.hero-title-wrap {
+			h1 {
+				a {
+					font-size: 24px !important;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 800px) {
+	.hero-title {
+		padding-bottom: 50% !important;
+	}
+}
+@media (max-width: 500px) {
+	.hero-title .hero-title-wrap h1 {
+		margin: 10px 0 10px 0 !important;
+	}
+	.post-share {
+		position: fixed;
+		bottom: 0;
+		width: 100vw;
+		left: 0;
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
+		display: flex !important;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: row nowrap;
+		        flex-flow: row nowrap;
+		z-index: 9999;
+		a {
+			margin: 0 !important;
+			padding: 0 !important;
+			-webkit-box-flex: 1 !important;
+			    -ms-flex-positive: 1 !important;
+			        flex-grow: 1 !important;
+			width: auto !important;
+			height: 40px !important;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			text-align: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			svg {
+				margin-top: 0 !important;
+				left: 50% !important;
+				-webkit-transform: translate(-50%, -50%);
+				        transform: translate(-50%, -50%);
+				width: 28px !important;
+				height: 28px !important;
+				vertical-align: baseline !important;
+			}
+			&::before {
+				display: none !important;
+			}
+			span {
+				display: none !important;
+			}
+		}
+	}
+}
+@media (max-width: 400px) {
+	.hero-title .hero-title-wrap h1 {
+		line-height: .8 !important;
+	}
+	.hero-title-wrap {
+		padding: 60px 15px 15px 15px !important;
+	}
+}
+@media (max-width: 600px) {
+	.related-post .related-item {
+		width: 50%;
+	}
+}
+@media (max-width: 1130px) {
+	body::before, body::after {
+		display: none !important;
+	}
+}
+@media (max-width: 768px) {
+	.info__1, .info__2, .info__3 {
+		width: 100%;
+	}
+	.info__blog {
+		flex-flow: column;
+	}
+	.info__1, .info__2 {
+		border-bottom: 1px solid #ccc;
+	}
+
+}

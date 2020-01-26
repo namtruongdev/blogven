@@ -1,0 +1,49 @@
+:root {
+
+	// Setting Color
+    --primary-color: #fff;
+    --second-color: #000;
+    --third-color: #131e25;
+    --four-color: #240b36;
+    --primary-hover-color: linear-gradient(to right, #240b36, #c31432);
+
+    // Setting Background
+    --primary-background-color: #c31432;
+    --second-background-color: linear-gradient(to right, #240b36, #c31432);
+    --primary-hover-background-color: linear-gradient(to right, #240b36, #c31432);
+    --primary-navigation-background-color: rgba(0,0,0,.3);
+
+    // Dark theme
+    --darkbg: #121212;
+    --lightbg: #fff3ba;
+    --darkbg-main: #1a1a1a;
+    --lightbg-main: #fff;
+    --lightbg-main-2: #131e25;
+    --lightbg-main-3: #240b36;
+    --darkcl: rgba(255,255,255,.87);
+    --darkcl-2: rgba(255,255,255,.60);
+    --darkcl-3: rgba(255,255,255,.38);
+    --lightcl: #fff;
+    --lightcl-2: transparent;
+    --beforebg: #fff3ba;
+    --beforebg-hero: #fff;
+    --beforebg-main: #fff;
+    --darkbg-main-2: #262626;
+    --scheme-bg: #8a2124;
+}
+footer {
+    --bg: #fff;
+    --bgi: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    --cl: #222;
+}
+header {
+    --bg: #8a2124;
+    --cl: #1c563f;
+}
+.sidebar-container {
+    --bcl: #1c563f;
+    --cl: #1c563f;
+}
+.pagination {
+    --cl: #1c563f;
+}

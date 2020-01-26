@@ -1,0 +1,16 @@
+@import 'nav-post';
+@import 'hero-title';
+@import '../../variable';
+@import '../../color';
+
+.header-wrap {
+
+	position        : relative;
+	background      : var(--bg);
+	display         : -webkit-box;
+	display         : flex;
+	-webkit-box-orient       : vertical;
+	-webkit-box-direction       : normal;
+	flex-flow       : column;
+	font-family     : $primary-font-family;
+}

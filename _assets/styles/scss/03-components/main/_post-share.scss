@@ -1,0 +1,58 @@
+@import '../variable';
+.post-share {
+	font-family: $second-font-family;
+	a {
+		font-weight: 400;
+		font-size: .875em;
+		color: #fff;
+		height: 30px;
+		width: auto;
+		display: inline-block;
+		padding: 0 12px 0 32px;
+		margin-right: 6px;
+		position: relative;
+		&::before {
+			left: -6px;
+			display: block;
+			-webkit-transform: rotate(7deg);
+			        transform: rotate(7deg);
+		}
+		&::before, span::after {
+			width: 10px;
+			height: 80px;
+			margin-top: -50px;
+			background: var(--beforebg-main);
+
+			content: '';
+			position: absolute;
+			top: 50%;
+		}
+		span::after {
+			display: block;
+			right: -9px;
+			-webkit-transform: rotate(7deg);
+			        transform: rotate(7deg);
+		}
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 12px;
+			margin-top: -8px;
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+}
+.face {
+	background: #3a5a99 !important;
+}
+.twit {
+	background: #30a9d6 !important;
+}
+.mail {
+	background: #717171 !important;
+}
+.telegram {
+	background: #179cde !important;
+}

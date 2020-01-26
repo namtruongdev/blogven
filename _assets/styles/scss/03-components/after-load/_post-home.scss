@@ -1,0 +1,71 @@
+@import '../../mixin';
+@import '../variable';
+
+.post-container {
+
+	.post-wrap {
+		&:hover, &:focus, &:active {
+			.thumbnail-post-container {
+				img {
+					-webkit-transform : scale(1.1);
+					        transform : scale(1.1);
+					-webkit-transition: $default-transition;
+					transition: $default-transition;
+				}
+				a {
+					@include primary-background-color(.4);
+					-webkit-transition: background $default-transition-link;
+					transition: background $default-transition-link;
+				}
+			}
+			.post-excerpt-container {
+				h2 {
+					a {
+						background             : -webkit-gradient(linear, left top, right top, from(#240b36), to(#c31432));
+						background             : linear-gradient(to right, #240b36, #c31432);
+						-webkit-background-clip: text;
+						background-clip        : text;
+						color                  :rgba(0,0,0,0);
+						-webkit-animation      : rainbow 2s ease-in-out infinite;
+						animation              : rainbow 2s ease-in-out infinite;
+						background-size        : 200% 200%;
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.thumbnail-post-container {
+			a {
+				position: absolute;
+				top     : 0;
+				left    : 0;
+				width   : 100%;
+				height  : 100%;
+				@include primary-background-color(.1);
+				z-index : 2;
+			}
+		}
+		.post-excerpt-container {
+			.post-author-container {
+				&:hover, &:focus, &:active {
+					img {
+						-webkit-transform : rotate(360deg);
+						        transform : rotate(360deg);
+						-webkit-transition: -webkit-transform .5s ease-in-out;
+						transition: -webkit-transform .5s ease-in-out;
+						transition: transform .5s ease-in-out;
+						transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+					}
+					span {
+						a {
+							background             : var(--primary-hover-color);
+							-webkit-background-clip: text;
+							background-clip        : text;
+							color                  :rgba(0,0,0,0);
+						}
+					}
+				}
+			}
+		}
+	}
+}

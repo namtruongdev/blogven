@@ -1,0 +1,35 @@
+.slogan-container {
+    height           : 250px;
+    display          : -webkit-box;
+    display          : flex;
+    -webkit-box-pack  : center;
+            justify-content  : center;
+    -webkit-box-align      : center;
+            align-items      : center;
+    text-align       : center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-flow: column;
+    padding: 15px;
+    background-color: var(--bg);
+    color: var(--primary-color);
+    -webkit-clip-path: polygon(100% 100%,100% 0,-400% 0);
+    clip-path: polygon(100% 100%,100% 0,-400% 0);
+
+        h2 {
+            margin: 0;
+
+            a {
+                font-size: 1.5em;
+                font-weight: 600;
+            color: var(--primary-color);
+                
+            }
+        }
+
+        p {
+            font-size: 1.25em;
+            line-height: 1.5;
+
+        }
+}

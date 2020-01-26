@@ -1,0 +1,12 @@
+@mixin second-color($alpha) {
+	color: rgba(0,0,0, $alpha);
+}
+@mixin primary-color($alpha) {
+	color: rgba(255,255,255, $alpha);
+}
+@mixin primary-background-color($alpha) {
+	background: rgba(0,0,0,$alpha);
+}
+@mixin second-background-color($alpha) {
+	background: rgba(255,255,255,$alpha);
+}

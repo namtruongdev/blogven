@@ -45,16 +45,16 @@ to check if you've successfully installed Git or not?
 
 To use Git, you must configure its username and password.
 
-**Username configuration**
+**Login Email configuration**
 
 {% highlight terminal %}
-$ git config --global user.name "your username"
+$ git config --global user.email "your email"
 {% endhighlight %}
 
-**Password configuration**
+**Your name configuration**
 
 {% highlight terminal %}
-$ git config --global user.name "your username"
+$ git config --global user.name "your name"
 {% endhighlight %}
 
 Because every time you perform a Push operation, Git will ask for a password again, which is quite inconvenient, so we will save a temporary password in ram to solve this problem.

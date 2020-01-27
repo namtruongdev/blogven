@@ -2,7 +2,7 @@
 layout: page
 title: About
 author: Nam Truong
-date_modified: 17-01-2020
+date: 2020-01-17
 thumbnail: gioi-thieu.jpg
 excerpt: About the author and the Lap Trinh Ban Than blog
 seo_description: About the author and the Lap Trinh Ban Than blog

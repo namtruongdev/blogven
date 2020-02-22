@@ -1,7 +1,7 @@
 {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.next_page %}
-      <a class='next' href="{{ paginator.next_page_path | prepend: site.baseurl }}">Xem thêm</a>
+      <a class='next' href="{{ paginator.next_page_path | prepend: site.baseurl }}">Load more</a>
     {% endif %}
   </div>
   {% endif %}

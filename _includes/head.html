@@ -10,6 +10,13 @@
     <meta http-equiv="cache-control" content="public">
     <meta http-equiv="expires" content="86400">
     <meta content="INDEX,FOLLOW" name="robots">
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon" sizes="144x144">
+    <link rel="shortcut icon" href="{{ 'favicon-32.ico' | absolute_url }}" type="image/x-icon" sizes="32x32">
+    <link rel="shortcut icon" href="{{ 'favicon-16.ico' | absolure_url }}" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="{{ 'icon-16.png' | absolute_url }}" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{ 'icon-32.png' | absolute_url }}" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="{{ 'apple-touch-icon-180.png' | absolute_url }}" sizes="180x180">     	
+    <meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolure_url }}">
     {% if page.path contains "_posts" %}
     <meta property="article:publisher" content="https://www.facebook.com/laptrinhbanthandotcom" />
     <meta property="article:author" content="https://www.facebook.com/lonelybaby99" />
@@ -54,13 +61,6 @@
     {% if page.class == "home" or page.layout == 'arichive' or page.layout == 'tag' or page.layout == 'category' or page.layout == 'page' %}{% include schema-organization.html %}{% endif %}
     {% if page.path contains "_posts" %}{% include schema-blog.html %}{% endif %}
 
-    <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon" sizes="144x144">
-    <link rel="shortcut icon" href="{{ 'favicon-32.ico' | absolute_url }}" type="image/x-icon" sizes="32x32">
-    <link rel="shortcut icon" href="{{ 'favicon-16.ico' | absolure_url }}" type="image/x-icon" sizes="16x16">
-    <link rel="icon" href="{{ 'icon-16.png' | absolute_url }}" type="image/png" sizes="16x16">
-    <link rel="icon" href="{{ 'icon-32.png' | absolute_url }}" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="{{ 'apple-touch-icon-180.png' | absolute_url }}" sizes="180x180">     	
-    <meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolure_url }}">
     <!-- Place favicon.ico in the root directory -->
     <link rel="preload" href="{{ 'assets/styles/main.css' | absolute_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:600,700&display=swap&subset=vietnamese" as="style" onload="this.onload=null;this.rel='stylesheet'">

@@ -22,14 +22,14 @@
 	{% if page.layout == "category" or page.layout == "tag" %}
 		<img alt="{{ page.title }}" src="{{ site.url }}/assets/img/danh-muc-va-tu-khoa.jpg">
 	<div class="hero-title-wrap">
-		<h1><a href="{{ site.url }}{{ page.url }}">{% if page.category %}Chuyên mục: {{ page.category }}{% else %}Từ khóa: {{ page.tag }}{% endif %}</a></h1>
+		<h1><a href="{{ site.url }}{{ page.url }}">{% if page.category %}Category: {{ page.category }}{% else %}Keyword: {{ page.tag }}{% endif %}</a></h1>
 		<p class="cate-seo-title">{{ page.seo_description }}</p>
 	</div>
 	{% endif %}
 	{% if page.layout == "archive" %}
 			<img alt="{{ page.title }}" src="{{ site.url }}/assets/img/dong-ho.jpg">
 	<div class="hero-title-wrap">
-		<h1><a href="{{ site.url }}{{ page.url }}">Lưu trữ bài viết - {{ page.date | date: "%Y" }}</a></h1>
+		<h1><a href="{{ site.url }}{{ page.url }}">Archive for post - {{ page.date | date: "%Y" }}</a></h1>
 	</div>
 	{% endif %}
 </header>

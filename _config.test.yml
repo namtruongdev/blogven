@@ -5,6 +5,7 @@ description: Cổng thông tin về Linux & Mã nguồn mở
 seo_description: Lập Trình Bản Thân là người bạn tốt. Tìm hiểu cách sử dụng công nghệ, tiện ích xung quanh bạn và khám phá những thứ hay ho trên Internet.
 baseurl: ""
 url: "http://localhost:3000"
+facebook: "https://www.facebook.com/truongduongg99"
 sass:
   sass_dir: assets/styles
 

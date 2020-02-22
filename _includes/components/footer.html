@@ -11,7 +11,7 @@
             <a title="Site map" href="{{ site.url }}/site-map.html" target="_blank">Site map</a>
         </div>
         <div class="info__3">
-            <a title="Chuyển sang phiên bản tiếng Việt" href="https://laptrinhbanthan.com">
+            <a title="Chuyển sang phiên bản tiếng Việt" href="https://laptrinhbanthan.com{{ page.url | replace: 'index.html' }}">
                 <img src="{{ site.url }}/assets/img/viet-nam.png" width="32" alt="union-jack">
                 Phiên bản tiếng Việt</a>
         </div>
@@ -21,7 +21,7 @@
                 <use xlink:href="#heart-solid">
             </svg>&nbsp;and&nbsp;<svg style="width: 1em;height: 1em; color: #6f4e37; vertical-align: top;">
                 <use xlink:href="#mug-hot-solid">
-            </svg>&nbsp;by <a title="Author" target="_blank" href="https://www.facebook.com/lonelybaby99">&nbsp;Nam Truong</a>.
+            </svg>&nbsp;by <a title="Author" target="_blank" href="{{ site.facebook }}">&nbsp;Nam Truong</a>.
         </div>
         <div class="social-icon-footer">
             <a target="_blank" aria-label="Follow us on Telegram" class="icon-footer tele" href="https://t.me/lonelybaby99" title="Follow us Telegram">

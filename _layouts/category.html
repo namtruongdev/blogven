@@ -38,7 +38,7 @@ class: category
                 <!-- Tên tác giả và ngày tháng đăng bài -->
                 <span>
                     <a target="_blank" title="Tác giả" href="{{ author.facebook }}">{{ author.name }}</a>
-                    <time datetime="{{ post.date_modified }}">{{ post.date_modified }}</time>
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>
                 </span>
             </div>
         </div>

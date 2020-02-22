@@ -5,6 +5,7 @@ description: Linux & Open source portal
 seo_description: Lap Trinh Ban Than is best friend. Learn how to use the technology and utilities around you and discover the cool stuff on the Internet.
 baseurl: ""
 url: "https://en.laptrinhbanthan.com"
+facebook: "https://www.facebook.com/truongduongg99"
 sass:
   sass_dir: assets/styles
 

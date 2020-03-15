@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>Linux &amp; Open source portal</description>
+    <link>https://en.laptrinhbanthan.com/</link>
+    <atom:link href="https://en.laptrinhbanthan.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 15 Mar 2020 09:48:22 -0400</pubDate>
+    <lastBuildDate>Sun, 15 Mar 2020 09:48:22 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>5 ways to reverse a string in JavaScript</title>
+        <description>&lt;p&gt;&lt;strong&gt;Writing a function to reverse a string&lt;/strong&gt; is one of the problems you might encounter in JavaScript-related positions.&lt;/p&gt;
+
+&lt;p&gt;Perhaps the company you are applying for requires that you do not use methods available in JavaScript to solve problems. So let me try to find out and pocket a few ways to solve the problem above to protect yourself.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-for-loop&quot;&gt;1. For loop&lt;/h2&gt;
+
+&lt;p&gt;This is the simplest way we can think of right now. In this method we will use a descending loop to loop through each letter of the string and create a new string using the string addition method.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/namtruongdev/0abc7d6be1ea704d7cdc84ab274f9f79.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Another way to solve the above problem is to use a &lt;strong&gt;for…of&lt;/strong&gt; loop. This is a new loop introduced in ES6. This loop has the function of looping through each element in a string or an array. Using this method seems to help your code reduce errors and tidier than the above.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reserve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;reversed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Note: It must be char + reversed to receive the reverse string. You can try doing the opposite to check the results.&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Output: olleH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;2-use-reverse-method&quot;&gt;2. Use reverse() method&lt;/h2&gt;
+
+&lt;p&gt;Because &lt;strong&gt;reversed()&lt;/strong&gt; medthod is a method that returns the inverse order of an array and it is only used in an array, to be able to use this method to solve the problem, we need to use it with the other two methods are &lt;strong&gt;split()&lt;/strong&gt; and &lt;strong&gt;join()&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Output: olleH&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Very fast when we use the built-in medthod is not it.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Explain: First we will have to split the input string and convert it into an array using split (''), in split () we pass an empty string to separate each character. We then use the reverse () method to reverse the elements in the array. And finally use join ('') to join the elements in the array into a string (Similar to split (), we also pass an empty string to concatenate characters together without separating by any characters. come on).&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;3-spread-operator&quot;&gt;3. Spread Operator&lt;/h2&gt;
+
+&lt;p&gt;This is similar to the above, but it’s worth it anyway. That is, using the new Spread (&lt;strong&gt;…&lt;/strong&gt;) operator in ES6. Spread Operator can decompose characters in a string and convert the string into an array…&lt;/p&gt;
+
+&lt;p&gt;Therefore, in this case we will use the Spread operator to separate the characters in the input string.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// [... str] means parsing the characters in the str parameter just passed and turning it into an array. Left to do as above.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Output: olleH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;4-reduce-method&quot;&gt;4. Reduce() method&lt;/h2&gt;
+
+&lt;p&gt;Reduce() is a method used for arrays, so you need to use split() to split the string and convert that string into an array before you can use this method.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Explain: Those who don't know about reduce() method can search gg to learn more about it. In this problem, we pass reduce() 2 para, rev takes the initial value of the array, char is the value of the current element, the single quote character to set the default value for rev is an empty string..&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;5-recursion&quot;&gt;5. Recursion&lt;/h2&gt;
+
+&lt;p&gt;And the last way is to use recursive method. Recursive is understood as a function that calls itself, in this problem I will use the substr () method to cut the string gradually and use access string syntax to add the cut-out character to the last string. If it is hard to imagine, just copy the code to test and run it.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Explain: In this function I have to use the 3-operator (Ternary Operator) to shorten the code. If the argument is an empty string, it will return the string.If the error means that the string is valid, it will call revese () to cut the string and add it to the end of the string. So on until the original string is empty, the new string will be returned.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Good job! So we have learned 5 ways to reverse a string in JavaScript already.&lt;/p&gt;
+
+&lt;p&gt;Hope you learn well.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/5-cach-dao-nguoc-chuoi-trong-javascript.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/5-cach-dao-nguoc-chuoi-trong-javascript.html</guid>
+        
+        <category>JavaScript</category>
+        
+        <category>Algorithm</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Handling conflicts in Git with rebasing or merging</title>
+        <description>&lt;h2 id=&quot;rebasing-vs-merging-which-should-i-choose&quot;&gt;Rebasing vs Merging. Which should I choose?&lt;/h2&gt;
+
+&lt;p&gt;Although the above two ways have the same results. But rebasing and merging have completely different ways of working.&lt;/p&gt;
+
+&lt;p&gt;Specifically, when you use the &lt;strong&gt;git merge&lt;/strong&gt; command to merge two branches, it will select the last commit on those two branches and create another commit to merge those two commits. It seems that when you use this method, you will have a pretty confusing history if there are no general rules set for team members.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/xu-ly-xung-dot-trong-git-1-300x172.png&quot; alt=&quot;Handling conflicts in Git with rebasing or merging - Ảnh 1&quot; data-srcset=&quot;    /assets/resized/xu-ly-xung-dot-trong-git-1-100x57.png 100w,    /assets/resized/xu-ly-xung-dot-trong-git-1-150x86.png 150w,    /assets/resized/xu-ly-xung-dot-trong-git-1-300x172.png 300w, /assets/img/xu-ly-xung-dot-trong-git-1.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/xu-ly-xung-dot-trong-git-1-300x172.png&quot; alt=&quot;Handling conflicts in Git with rebasing or merging - Ảnh 1&quot; srcset=&quot;    /assets/resized/xu-ly-xung-dot-trong-git-1-100x57.png 100w,    /assets/resized/xu-ly-xung-dot-trong-git-1-150x86.png 150w,    /assets/resized/xu-ly-xung-dot-trong-git-1-300x172.png 300w, /assets/img/xu-ly-xung-dot-trong-git-1.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;When using &lt;strong&gt;git rebase&lt;/strong&gt; to merge two branches, you will have a better history, more straight line, and easier to see than &lt;strong&gt;git merge&lt;/strong&gt;. But rebasing literally means destroy, it moves the entire branch you want to merge to the top of the main branch and rewrites the commit history for that branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/xu-ly-xung-dot-trong-git-2-300x204.png&quot; alt=&quot;Handling conflicts in Git with rebasing or merging - Ảnh 2&quot; data-srcset=&quot;    /assets/resized/xu-ly-xung-dot-trong-git-2-100x68.png 100w,    /assets/resized/xu-ly-xung-dot-trong-git-2-150x102.png 150w,    /assets/resized/xu-ly-xung-dot-trong-git-2-300x204.png 300w, /assets/img/xu-ly-xung-dot-trong-git-2.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/xu-ly-xung-dot-trong-git-2-300x204.png&quot; alt=&quot;Handling conflicts in Git with rebasing or merging - Ảnh 2&quot; srcset=&quot;    /assets/resized/xu-ly-xung-dot-trong-git-2-100x68.png 100w,    /assets/resized/xu-ly-xung-dot-trong-git-2-150x102.png 150w,    /assets/resized/xu-ly-xung-dot-trong-git-2-300x204.png 300w, /assets/img/xu-ly-xung-dot-trong-git-2.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;So using &lt;strong&gt;git merge&lt;/strong&gt; seems to be a safer option, but the answer to choose to use &lt;strong&gt;git merge&lt;/strong&gt; or &lt;strong&gt;git rebase&lt;/strong&gt; is still yours and depends on the project.&lt;/p&gt;
+
+&lt;p&gt;Remember that you should only use &lt;strong&gt;git rebase&lt;/strong&gt; in your own branch and do not use it with anything that has been pushed to the remote if you don’t want to be hated by everyone in the team. And if you are not familiar with rebasing, it is best to use merging because it is safer.&lt;/p&gt;
+
+&lt;h2 id=&quot;merge-multiple-small-commits-into-one-main-commit-with-interactive-rebasing&quot;&gt;Merge multiple small commits into one main commit with interactive rebasing&lt;/h2&gt;
+
+&lt;p&gt;To make the histories tree look better, you have to clean it on your branch before pushing it on the remote.&lt;/p&gt;
+
+&lt;p&gt;For example: You are writing the comments feature for the company on the &lt;strong&gt;feature/comments&lt;/strong&gt; branch, in the &lt;strong&gt;feature/comments&lt;/strong&gt; branch, there are many other commits that are created after each time you edit something in this branch and you do not clean again. The &lt;strong&gt;feature/comments&lt;/strong&gt; branch before pushing on the remote will help make the company’s histories tree not only harder to observe but also have redundant, unimportant commits on your branch.&lt;/p&gt;
+
+&lt;p&gt;So to prevent this, you will use something called &lt;strong&gt;squash&lt;/strong&gt; using the &lt;strong&gt;git rebase&lt;/strong&gt; command with the &lt;strong&gt;-i&lt;/strong&gt; parameter:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git rebase &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Next, the terminal will display a list of all the commits on your branch in order from top to bottom, the latest commits will be at the bottom and the first commits will be on the top:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;pick 380d5e1 release comments feature
+squash 30803a6 fix iss1
+squash 30803a2 fix iss2
+squash 30803a5 fix iss3
+squash 30803a3 fix iss4
+
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Rebase c8d5f6a..30803a6 onto c8d5f6a &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2 commands&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Commands:
+&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;p, pick &amp;lt;commit&amp;gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; use commit
+&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;r, reword &amp;lt;commit&amp;gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; use commit, but edit the commit message
+&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;e, edit &amp;lt;commit&amp;gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; use commit, but stop &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;amending
+&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;s, squash &amp;lt;commit&amp;gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; use commit, but meld into previous commit
+&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;f, fixup &amp;lt;commit&amp;gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; like &lt;span class=&quot;s2&quot;&gt;&quot;squash&quot;&lt;/span&gt;, but discard this commit&lt;span class=&quot;s1&quot;&gt;'s log message
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;x, exec &amp;lt;command&amp;gt; = run command (the rest of the line) using shell
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;b, break = stop here (continue rebase later with '&lt;/span&gt;git rebase &lt;span class=&quot;nt&quot;&gt;--continue&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;')
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;d, drop &amp;lt;commit&amp;gt; = remove commit
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;l, label &amp;lt;label&amp;gt; = label current HEAD with a name
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;t, reset &amp;lt;label&amp;gt; = reset HEAD to a label&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you can see above, you have a lot of commits that &lt;strong&gt;fix iss&lt;/strong&gt; and it should be ignored when pushing the code on the remote by replacing the &lt;strong&gt;pickup&lt;/strong&gt; with &lt;strong&gt;squash&lt;/strong&gt; at the beginning of each commit that needs matching.&lt;/p&gt;
+
+&lt;p&gt;You should only keep the first commit and the other commits will be merged with this one.&lt;/p&gt;
+
+&lt;p&gt;By now, you have seen the effect when using interactive rebasing yet?&lt;/p&gt;
+
+&lt;p&gt;Wish you happy learning. Bye!&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/xu-ly-xung-dot-trong-git.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/xu-ly-xung-dot-trong-git.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Teamwork via Git</title>
+        <description>&lt;p&gt;You can understand a teamwork process through Git using my example.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;Note: If you do not have basic knowledge of git and do not understand what this article says, please review the previous articles about your git.&lt;/p&gt;
+
+&lt;p&gt;Example: You are assigned to fix bugs &lt;strong&gt;iss53&lt;/strong&gt; for a company project and another person fixes another bug in the project. So how can two people code together quickly and conveniently?&lt;/p&gt;
+
+&lt;p&gt;To make it easy to understand, I will specify the names of the two people are A and B.&lt;/p&gt;
+
+&lt;p&gt;When A fixes bugs &lt;strong&gt;iss53&lt;/strong&gt;, according to the process A will have to create a new branch.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; iss53
+&lt;span class=&quot;go&quot;&gt;Switched to a new branch &quot;iss53&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now the main branch of the company looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/lam-viec-nhom-git-1-300x146.png&quot; alt=&quot;Teamwork via Git - Ảnh 1&quot; data-srcset=&quot;    /assets/resized/lam-viec-nhom-git-1-100x49.png 100w,    /assets/resized/lam-viec-nhom-git-1-150x73.png 150w,    /assets/resized/lam-viec-nhom-git-1-300x146.png 300w, /assets/img/lam-viec-nhom-git-1.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/lam-viec-nhom-git-1-300x146.png&quot; alt=&quot;Teamwork via Git - Ảnh 1&quot; srcset=&quot;    /assets/resized/lam-viec-nhom-git-1-100x49.png 100w,    /assets/resized/lam-viec-nhom-git-1-150x73.png 150w,    /assets/resized/lam-viec-nhom-git-1-300x146.png 300w, /assets/img/lam-viec-nhom-git-1.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;Person A does something and makes a commit on the &lt;strong&gt;iss53&lt;/strong&gt; branch.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'added a new footer [issue 53]'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/lam-viec-nhom-git-2-300x108.png&quot; alt=&quot;Teamwork via Git - Ảnh 2&quot; data-srcset=&quot;    /assets/resized/lam-viec-nhom-git-2-100x36.png 100w,    /assets/resized/lam-viec-nhom-git-2-150x54.png 150w,    /assets/resized/lam-viec-nhom-git-2-300x108.png 300w, /assets/img/lam-viec-nhom-git-2.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/lam-viec-nhom-git-2-300x108.png&quot; alt=&quot;Teamwork via Git - Ảnh 2&quot; srcset=&quot;    /assets/resized/lam-viec-nhom-git-2-100x36.png 100w,    /assets/resized/lam-viec-nhom-git-2-150x54.png 150w,    /assets/resized/lam-viec-nhom-git-2-300x108.png 300w, /assets/img/lam-viec-nhom-git-2.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;Somewhere else, Person B does the same thing that Person A did to create a new branch named &lt;strong&gt;hotfix&lt;/strong&gt; and do something and then create a commit on the &lt;strong&gt;hotfix&lt;/strong&gt; branch.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; hotfix
+&lt;span class=&quot;go&quot;&gt;Switched to a new branch 'hotfix'
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;vim index.html
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fixed the broken email address'&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[hotfix 1fb7853] fixed the broken email address
+ 1 file changed, 2 insertions(+)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/lam-viec-nhom-git-3-300x143.png&quot; alt=&quot;Teamwork via Git - Ảnh 3&quot; data-srcset=&quot;    /assets/resized/lam-viec-nhom-git-3-100x48.png 100w,    /assets/resized/lam-viec-nhom-git-3-150x72.png 150w,    /assets/resized/lam-viec-nhom-git-3-300x143.png 300w, /assets/img/lam-viec-nhom-git-3.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/lam-viec-nhom-git-3-300x143.png&quot; alt=&quot;Teamwork via Git - Ảnh 3&quot; srcset=&quot;    /assets/resized/lam-viec-nhom-git-3-100x48.png 100w,    /assets/resized/lam-viec-nhom-git-3-150x72.png 150w,    /assets/resized/lam-viec-nhom-git-3-300x143.png 300w, /assets/img/lam-viec-nhom-git-3.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;After thoroughly checking their patches, person B decided to merge the &lt;strong&gt;hotfix&lt;/strong&gt; branch with the company’s main branch by running the &lt;strong&gt;git merge&lt;/strong&gt; command and then using &lt;strong&gt;git push&lt;/strong&gt; to push it onto the git server of the company.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout master
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git merge hotfix
+&lt;span class=&quot;go&quot;&gt;Updating f42c576..3a0874c
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git push&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now the main branch of your company will look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/lam-viec-nhom-git-4-300x180.png&quot; alt=&quot;Teamwork via Git - Ảnh 4&quot; data-srcset=&quot;    /assets/resized/lam-viec-nhom-git-4-100x60.png 100w,    /assets/resized/lam-viec-nhom-git-4-150x90.png 150w,    /assets/resized/lam-viec-nhom-git-4-300x180.png 300w, /assets/img/lam-viec-nhom-git-4.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/lam-viec-nhom-git-4-300x180.png&quot; alt=&quot;Teamwork via Git - Ảnh 4&quot; srcset=&quot;    /assets/resized/lam-viec-nhom-git-4-100x60.png 100w,    /assets/resized/lam-viec-nhom-git-4-150x90.png 150w,    /assets/resized/lam-viec-nhom-git-4-300x180.png 300w, /assets/img/lam-viec-nhom-git-4.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;Once the merge is complete, you can delete that branch because it’s not important right now.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; hotfix
+&lt;span class=&quot;go&quot;&gt;Deleted branch hotfix (3a0874c).&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now go back to person A, because person B has done their work and has pushed it onto the company’s git server so person A needs to use &lt;strong&gt;git pull&lt;/strong&gt; to pull the code back:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout master
+&lt;span class=&quot;go&quot;&gt;Switched to branch 'master'
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git pull&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then move on to the &lt;strong&gt;iss53&lt;/strong&gt; branch and use the &lt;strong&gt;git rebase&lt;/strong&gt; command to merge the &lt;strong&gt;master&lt;/strong&gt; branch into the &lt;strong&gt;iss53&lt;/strong&gt; branch and continue the work and make another commit on the &lt;strong&gt;iss53&lt;/strong&gt; branch:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout iss53
+&lt;span class=&quot;go&quot;&gt;Switched to branch 'iss53'
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git rebase master
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'finished the new footer [issue 53]'&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[iss53 ad82d7a] finished the new footer [issue 53]
+1 file changed, 1 insertion(+)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img class=&quot;lazy&quot; src=&quot;https://en.laptrinhbanthan.com/assets/img/loading.jpg&quot; data-src=&quot;/assets/resized/lam-viec-nhom-git-5-300x143.png&quot; alt=&quot;Teamwork via Git - Ảnh 5&quot; data-srcset=&quot;    /assets/resized/lam-viec-nhom-git-5-100x48.png 100w,    /assets/resized/lam-viec-nhom-git-5-150x71.png 150w,    /assets/resized/lam-viec-nhom-git-5-300x143.png 300w, /assets/img/lam-viec-nhom-git-5.png 500w&quot; /&gt;&lt;/p&gt;
+&lt;noscript&gt;
+	&lt;img src=&quot;/assets/resized/lam-viec-nhom-git-5-300x143.png&quot; alt=&quot;Teamwork via Git - Ảnh 5&quot; srcset=&quot;    /assets/resized/lam-viec-nhom-git-5-100x48.png 100w,    /assets/resized/lam-viec-nhom-git-5-150x71.png 150w,    /assets/resized/lam-viec-nhom-git-5-300x143.png 300w, /assets/img/lam-viec-nhom-git-5.png 500w&quot; /&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;Suppose that person A decides that the work on &lt;strong&gt;iss53&lt;/strong&gt; branch is completed. Person A will checkout the &lt;strong&gt;master&lt;/strong&gt; branch and use the &lt;strong&gt;git rebase&lt;/strong&gt; command to merge the &lt;strong&gt;iss53&lt;/strong&gt; branch with the &lt;strong&gt;master&lt;/strong&gt; branch:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout master
+&lt;span class=&quot;go&quot;&gt;Switched to branch 'master'
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git rebase iss53&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And finally delete the &lt;strong&gt;iss53&lt;/strong&gt; branch:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; iss53&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, push the code to the company’s git server:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git push&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Good. So you’ve learned how to work in groups with others.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/lam-viec-nhom-qua-git.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/lam-viec-nhom-qua-git.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Introducing .gitignore</title>
+        <description>&lt;h2 id=&quot;what-is-gitignore&quot;&gt;What is .gitignore?&lt;/h2&gt;
+
+&lt;p&gt;.gitignore is a small text file that appears in most projects.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use-gitignore&quot;&gt;How to use .gitignore?&lt;/h2&gt;
+
+&lt;p&gt;.gitignore is often used by programmers in their projects to skip unnecessary files and folders when they commit their projects to Github.&lt;/p&gt;
+
+&lt;p&gt;For example: I want to ignore the &lt;strong&gt;node_modules&lt;/strong&gt; directory when committing because it is too heavy and unnecessary. I just need to write the name of the folder and in the &lt;strong&gt;.gitignore&lt;/strong&gt; file is done.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;node_modules
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p class=&quot;warning&quot;&gt;If you want to skip more files and other folders, you have to go down the line. One name per line.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;node_modules
+_site
+.sass-cache
+.jekyll-cache
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I wish you happy learning.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/gitignore.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/gitignore.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Proficiency in Git part 7</title>
+        <description>&lt;h2 id=&quot;revert-all-file-changes-of-a-commit&quot;&gt;Revert all file changes of a commit&lt;/h2&gt;
+
+&lt;p&gt;Use the &lt;strong&gt;Git log&lt;/strong&gt; to view the commit history:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git log
+&lt;span class=&quot;gp&quot;&gt;commit 50ef5484c2b98d06600f75b819105dc9b4cefa6b (HEAD -&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;Author: namtruongdev &amp;lt;namtruongdev@gmail.com&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;Date:   Sun Jan 26 21:53:28 2020 -0500
+
+    update
+
+commit 7d6fe403d0ec58ed1add3076bb7f9197717c27ca
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;Author: namtruongdev &amp;lt;namtruongdev@gmail.com&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;Date:   Sun Jan 26 09:57:42 2020 -0500&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, we will retrieve the commit you want to revert and issue the command &lt;strong&gt;git revert&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git revert 50ef5484c2b98d06600f75b819105dc9b4cefa6b&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;All changes to the files of the above commit will be reverted back to the original file.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;Limit &lt;strong&gt;git revert&lt;/strong&gt; as much as possible.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-7.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-7.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Proficiency in Git part 6</title>
+        <description>&lt;h2 id=&quot;delete-one-or-more-modified-files-in-the-working-directory&quot;&gt;Delete one or more modified files in the working directory&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &amp;lt;The file name to be discard the change&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The above command will delete all the changes you have added to that file.&lt;/p&gt;
+
+&lt;p&gt;The above command only applies to files that are not in the staging area.&lt;/p&gt;
+
+&lt;h2 id=&quot;move-one-or-more-files-from-the-staging-area-to-the-working-directory&quot;&gt;Move one or more files from the Staging area to the Working directory&lt;/h2&gt;
+
+&lt;p&gt;In fact, after you do git add to add files and staging areas, but you feel uncomfortable and want to move those files back to the working directory.&lt;/p&gt;
+
+&lt;p&gt;You can do the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git reset &amp;lt;file name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;edit-and-manipulate-committed-files&quot;&gt;Edit and manipulate committed files&lt;/h2&gt;
+
+&lt;p&gt;There are 3 options for us:&lt;/p&gt;
+
+&lt;p&gt;- Git reset --soft &lt;to commit=&quot;&quot;&gt;&lt;/to&gt;&lt;/p&gt;
+
+&lt;p&gt;- Git reset --mixed &lt;to commit=&quot;&quot;&gt;&lt;/to&gt;&lt;/p&gt;
+
+&lt;p&gt;- Git reset --hard &lt;to commit=&quot;&quot;&gt;&lt;/to&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Git reset &lt;span class=&quot;nt&quot;&gt;--soft&lt;/span&gt; 7d6fe403d0ec58ed1add3076bb7f9197717c27ca&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The above command will redirect the commit with the above id to staging area status.&lt;/p&gt;
+
+&lt;p&gt;The same goes for &lt;strong&gt;--mixed&lt;/strong&gt; and &lt;strong&gt;--hard&lt;/strong&gt; which will return the commit to the staging area or delete the commit as well.&lt;/p&gt;
+
+&lt;p class=&quot;danger&quot;&gt;Note when using &lt;strong&gt;--hard&lt;/strong&gt; if not careful will lose data.&lt;/p&gt;
+
+&lt;p&gt;This part pauses here.&lt;/p&gt;
+
+&lt;p&gt;I wish you happy learning.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-6.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-6.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Proficiency in Git part 5</title>
+        <description>&lt;h2 id=&quot;branching&quot;&gt;Branching&lt;/h2&gt;
+
+&lt;h3 id=&quot;when-is-branching-usually-used&quot;&gt;When is branching usually used?&lt;/h3&gt;
+
+&lt;p&gt;- In fact, when you were working, suddenly the boss called the project report with bugs and needed to fix it immediately.&lt;/p&gt;
+
+&lt;p&gt;- You have a new feature and want to test it very carefully before incorporating it into the main project.&lt;/p&gt;
+
+&lt;p&gt;- You want to do something that does not want to involve the main branch (master).&lt;/p&gt;
+
+&lt;h3 id=&quot;performing-branching&quot;&gt;Performing Branching&lt;/h3&gt;
+
+&lt;p&gt;For example, your blog needs to add comments feature below the article. You will create a new branch called &lt;strong&gt;feature/comments&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; feature/comments&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The above command will create a new branch and switch to that branch to work.&lt;/p&gt;
+
+&lt;p&gt;Type the command &lt;strong&gt;git branch&lt;/strong&gt; to see the current branch and branch are working. The working branch will have an asterisk &lt;strong&gt;(*)&lt;/strong&gt; in front of it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git branch
+&lt;span class=&quot;go&quot;&gt;master
+* feature/comments&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To switch back to the &lt;strong&gt;master&lt;/strong&gt; branch, type the command &lt;strong&gt;git checkout&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout master
+&lt;span class=&quot;go&quot;&gt;Switched to branch 'master'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;merging&quot;&gt;Merging&lt;/h2&gt;
+
+&lt;p&gt;After you are sure of your changes in the &lt;strong&gt;feature/comments&lt;/strong&gt; branch. You can pull any changes in this branch to the &lt;strong&gt;master&lt;/strong&gt; branch using &lt;strong&gt;git merge&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;Note that you must switch back to the &lt;strong&gt;master&lt;/strong&gt; branch before merging the &lt;strong&gt;feature/comments&lt;/strong&gt; branch.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git checkout master
+&lt;span class=&quot;go&quot;&gt;Switched to branch 'master'
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git merge feature/comments&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After successfully merging, the &lt;strong&gt;feature/comments&lt;/strong&gt; branch becomes redundant, you can delete it with the following command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; feature/comments&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This part I would like to pause here. In the next part, I will talk about &lt;strong&gt;git reset&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wish you happy learning.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-5.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-5.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Proficiency in Git part 4</title>
+        <description>&lt;h2 id=&quot;what-is-working-directory&quot;&gt;What is working directory?&lt;/h2&gt;
+
+&lt;p&gt;The term &lt;strong&gt;Working directory&lt;/strong&gt; is the directory in which you are working, including all files and subfolders in it.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-staging-area&quot;&gt;What is Staging area?&lt;/h2&gt;
+
+&lt;p&gt;The term &lt;strong&gt;Staging aria&lt;/strong&gt; is an explanation term for a collection of files that have been modified and located in &lt;strong&gt;Working directory&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Only files in the &lt;strong&gt;Staging area&lt;/strong&gt; area are allowed to commit.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-git-repository&quot;&gt;What is Git repository?&lt;/h2&gt;
+
+&lt;p&gt;The term &lt;strong&gt;Git repository&lt;/strong&gt; is a term that explains the set of all committed changes.&lt;/p&gt;
+
+&lt;p&gt;In other words &lt;strong&gt;Git repository&lt;/strong&gt; stores all your commits.&lt;/p&gt;
+
+&lt;p&gt;This post continues to pause here. In the next post, I will explain the commands &lt;strong&gt;git checkout&lt;/strong&gt; and &lt;strong&gt;git reset&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I wish you happy learning.&lt;/p&gt;
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-4.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-4.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Proficiency in Git part 3</title>
+        <description>&lt;p&gt;Some other basic commands, &lt;strong&gt;git log&lt;/strong&gt;, &lt;strong&gt;git show&lt;/strong&gt;, &lt;strong&gt;git diff&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;view-the-history-and-information-of-commits&quot;&gt;View the history and information of commits&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;strong&gt;git log&lt;/strong&gt; command is used to review the history of &lt;strong&gt;commits&lt;/strong&gt; and the information of each commit such as the author’s name, the commit date and the description of the commit.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git log
+&lt;span class=&quot;gp&quot;&gt;commit 50ef5484c2b98d06600f75b819105dc9b4cefa6b (HEAD -&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;Author: namtruongdev &amp;lt;namtruongdev@gmail.com&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;Date:   Sun Jan 26 21:53:28 2020 -0500
+
+    update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;view-the-contents-of-the-committed-file&quot;&gt;View the contents of the committed file&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git show 50ef5484c2b98d06600f75b819105dc9b4cefa6b&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The command &lt;strong&gt;git show + ID of the commit&lt;/strong&gt; is used to view the file contents before editing and after editing the files that have been committed.&lt;/p&gt;
+
+&lt;h2 id=&quot;view-the-contents-of-the-edited-file-but-not-committed&quot;&gt;View the contents of the edited file but not committed&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git diff&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;strong&gt;git diff&lt;/strong&gt; command is used to view the content before and after editing of files but has not been committed.&lt;/p&gt;
+
+&lt;p&gt;This post I temporarily stop here. In the following post, I will explain terms like &lt;strong&gt;Working dir&lt;/strong&gt;, &lt;strong&gt;Staging area&lt;/strong&gt;, &lt;strong&gt;Repository&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Have fun learning everyone offline.&lt;/p&gt;
+
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-3.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-3.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Proficiency in Git part 2</title>
+        <description>&lt;p&gt;Hi, this tutorial will show you how to create a new repository and work with it with some basic commands.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-new-repository-or-reinitialize-an-existing-one&quot;&gt;Create a new repository or reinitialize an existing one&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This command creates an empty repository, basically creating a .git directory containing subfolders for &lt;strong&gt;objects&lt;/strong&gt;, &lt;strong&gt;refs/heads&lt;/strong&gt;, &lt;strong&gt;refs/tags&lt;/strong&gt; and template files.&lt;/p&gt;
+
+&lt;p&gt;Every operation with the local repository, history will also be saved into this directory.&lt;/p&gt;
+
+&lt;h2 id=&quot;introducing-the-readmemd-file&quot;&gt;Introducing the README.md file&lt;/h2&gt;
+
+&lt;p&gt;- Not only with Git but with any source code and repository, we can easily see the appearance of &lt;strong&gt;README.md&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;- &lt;strong&gt;README.md&lt;/strong&gt; is optional but essential.&lt;/p&gt;
+
+&lt;p&gt;- Programmers, creators of source code or software often write in the manuals or simply write introductory information to help people better understand their projects.&lt;/p&gt;
+
+&lt;p&gt;- Written in &lt;strong&gt;markdown&lt;/strong&gt; language, writing like pure text and marked with special characters to format the text.&lt;/p&gt;
+
+&lt;h2 id=&quot;track-changes-on-the-repository&quot;&gt;Track changes on the repository&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The above command will tell you what you just changed in the repository and ask you to &lt;strong&gt;git add&lt;/strong&gt; to include it in the &lt;strong&gt;commit&lt;/strong&gt; if you haven’t already included it.&lt;/p&gt;
+
+&lt;h2 id=&quot;confirm-and-package-the-changed-files&quot;&gt;Confirm and package the changed files&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;desciption for change&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The above command encapsulates the changes into an &lt;strong&gt;Object&lt;/strong&gt; and assigns it a label as your description.&lt;/p&gt;
+
+&lt;p&gt;This part I temporarily end here. The next part I will introduce some other commands like &lt;strong&gt;log&lt;/strong&gt;, &lt;strong&gt;show&lt;/strong&gt;, &lt;strong&gt;diff&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wish you success offline.&lt;/p&gt;
+
+</description>
+        <pubDate></pubDate>
+        <link>https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-2.html</link>
+        <guid isPermaLink="true">https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-2.html</guid>
+        
+        <category>Git</category>
+        
+        
+        <category>Learn programming</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,940 @@
+<!doctype html>
+<html amp lang="en-US">
+
+<head>
+  <title>Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Lap Trinh Ban Than</title>
+  <meta charset="utf-8">
+  <link rel="alternate" hreflang="en-us"
+  href="https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html" />
+  <link rel="alternate" hreflang="x-default"
+  href="https://laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html" />
+  <meta property="author" content="Nam Trường">
+  <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+  <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js">
+  <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-ad-0.1.js">
+  <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com/" crossorigin>
+  <link rel="canonical" href="https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.html">
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": "https://en.laptrinhbanthan.com//linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.html",
+            "headline": "Instructions for hacking Facebook accounts with Ngrok and SEtoolkit",
+            "datePublished": "2019-02-06T00:00:00-05:00",
+            "dateModified": "2019-02-06T00:00:00-05:00",
+            "description": "This is the first technique in your Hacktips series, this guide makes it possible to hack any social account",
+            "author": {
+              "@type": "Person",
+              "name": "Nam Truong"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Lap trinh ban than",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://en.laptrinhbanthan.com/assets/img/laptrinhbanthandotcom-noel.png",
+                "width": 634,
+                "height": 120
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://en.laptrinhbanthan.com/assets/img/hack-facebook-cover.jpg",
+              "height": 630,
+              "width": 1200
+            }
+          }
+        </script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=vietnamese" rel="stylesheet">
+<script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
+ <meta name="description" content="This is the first technique in your Hacktips series, this guide makes it possible to hack any social account">
+<!-- Facebook OpenGraph -->
+
+<meta property="og:url"
+  content="https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit" />
+<meta property="og:description" content="This is the first technique in your Hacktips series, this guide makes it possible to hack any social account" />
+<meta property="og:image"
+  content="https://en.laptrinhbanthan.com/assets/img/hack-facebook-cover.jpg" />
+      <meta property="og:site_name" content="Lap Trinh Ban Than" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:locale" content="vi_VN" />
+      <meta property="fb:app_id" content="174766196750045" />
+      <meta property="fb:pages" content="838885076296704" />
+
+      <!-- Start Twitter Card ================== -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+      content="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit">
+    <meta name="twitter:description"
+      content="This is the first technique in your Hacktips series, this guide makes it possible to hack any social account">
+    <meta name="twitter:site" content="@lonely_baby99" />
+    <meta name="twitter:creator" content="@lonely_baby99">
+
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+  </style><noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+  <style amp-custom>
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size  : 16px;
+}
+
+.danger {
+  background   : #ffdddd;
+  color        : #000;
+  border-radius: 5px;
+  padding      : 15px;
+}
+
+.success {
+  background-color: #ddffdd;
+  border-radius   : 5px;
+  padding         : 15px;
+}
+
+.info {
+  background-color: #e7f3fe;
+  border-radius   : 5px;
+  padding         : 15px;
+}
+
+
+.warning {
+  background-color: #ffffcc;
+  border-radius   : 5px;
+  padding         : 15px;
+}
+
+.blog__post {
+  margin-top: 37px;
+}
+
+.navigation__container {
+  height           : 60px;
+  width            : 100%;
+  background-color : #8a2124;
+  position         : fixed;
+  z-index          : 99;
+  top              : 0;
+  left             : 0;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+  padding          : 0 15px;
+  -webkit-box-pack : justify;
+  -ms-flex-pack    : justify;
+  justify-content  : space-between;
+}
+
+.icon-bars {
+  width : 36px;
+  height: 36px;
+  color : #fff;
+}
+
+.icon__bars {
+  display: block;
+  width  : 36px;
+  height : 36px;
+  cursor : pointer;
+}
+
+.items-start {
+  font-size: 2em;
+  cursor   : pointer;
+  padding  : 0 15px;
+}
+
+.logo {
+  min-width: 211.333px;
+}
+
+.list--navigation a {
+  text-transform : uppercase;
+  text-decoration: none;
+  padding        : 10px 15px;
+  color          : #000;
+  border-bottom  : 1px solid #cccccc;
+}
+
+.list--navigation a:hover,
+.list--navigation a:focus,
+.list--navigation a:active {
+  color: #8a2124;
+}
+
+.list--navigation {
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow        : column;
+  flex-flow            : column;
+  text-align           : left;
+}
+
+.hero__image figure {
+  width   : 100%;
+  margin  : 0 auto;
+  position: relative;
+}
+
+.blog__content {
+  padding    : 15px;
+  line-height: 1.7;
+}
+.blog__content amp-img {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.blog__content h2 {
+  border-bottom: 3px solid #444;
+}
+.blog__content a {
+  color: #8a2124;
+}
+
+.des__post {
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  right           : 0;
+  background-color: rgba(0, 0, 0, .3);
+  padding-right   : 15px;
+  padding-left    : 15px;
+  padding-bottom  : 15px;
+}
+
+.des__post h1 {
+  margin     : 15px 0 0 0;
+  line-height: 1.2;
+  font-size  : 1.2em;
+}
+
+.des__post h1 a {
+  color          : #fff;
+  text-decoration: none;
+
+}
+
+.post__author {
+  color  : #fff;
+  margin : 10px 0;
+  display: inline-block;
+}
+
+.post__author a {
+  color          : #fff;
+  text-decoration: none;
+  color          : #fff;
+}
+
+.post__author a:hover,
+.post__author a:focus,
+.post__author a:active {
+  color: #8a2124;
+}
+
+.post__date {
+  color: #fff;
+}
+
+.post__date::before,
+.post__date::after {
+  content: '/';
+  display: inline-block;
+  top    : 0;
+  padding: 0 5px;
+  left   : 0;
+}
+
+.read-time {
+  color: #fff;
+}
+
+.share__bars {
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  position        : fixed;
+  bottom          : 0;
+  left            : 0;
+  right           : 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack   : justify;
+  justify-content : space-between;
+}
+
+.share__bars a {
+  padding        : 7px 10px;
+  text-decoration: none;
+  color          : #fff;
+  width          : 25%;
+  text-align     : center;
+}
+
+.share__bars a svg {
+  width         : 1.5em;
+  height        : 1.5em;
+  color         : #fff;
+  vertical-align: middle;
+}
+
+.fb {
+  background-color: #3b5998;
+}
+
+.tt {
+  background-color: #1da1f2;
+}
+
+.em {
+  background-color: #B23121;
+}
+
+.tl {
+  background-color: #0088cc;
+}
+
+.category__blog {
+  text-decoration: none;
+  color          : #8a2124;
+}
+
+.tags {
+  color: #8a2124;
+}
+
+.blog__footer {
+  padding              : 15px;
+  margin-bottom        : 39.5px;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow        : column;
+  flex-flow            : column;
+  text-align           : center;
+  background-color     : #f0f0f0;
+  font-size            : .875em;
+  color                : #444;
+}
+
+.copyright__blog {
+  color: #444;
+}
+
+table {
+  width          : 100%;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border : 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table th {
+  padding-top     : 12px;
+  padding-bottom  : 12px;
+  text-align      : left;
+  background-color: #8a2124;
+  color           : #fff;
+}
+
+.comment__blog a {
+  text-decoration : none;
+  text-align      : center;
+  color           : #fff;
+  background-color: #8a2124;
+  padding         : 7px 10px;
+  border-radius   : 3px;
+
+}
+
+.comment__blog {
+  margin-bottom   : 30px;
+  padding         : 7px 10px;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack   : center;
+  justify-content : center;
+}
+
+.to-top svg {
+  width : 2em;
+  height: 2em;
+  color : #fff;
+}
+
+.to-top {
+  position        : fixed;
+  bottom          : 60px;
+  right           : 15px;
+  border-radius   : 3px;
+  display         : block;
+  padding         : 5px 7px;
+  background-color: #8a21247c;
+}
+.blog__related {
+padding: 15px;
+}
+.blog__related figure {
+  margin-bottom: 32px;
+}
+.blog__related figure amp-img {
+  border-radius: 3px;
+}
+.blog__related figure figcaption h2 a{
+text-decoration: none;
+color: #000;
+}
+.blog__related figure figcaption h2 a:hover, .blog__related figure figcaption h2 a:focus, .blog__related figure figcaption h2 a:active {
+  color: #8a2124;
+}
+.blog__related figure figcaption h2 {
+  font-size: 1em;
+  margin-top: 5px;
+}
+.highlight {
+  overflow-x: auto;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+ol li{
+  margin-left: 15px;
+}
+
+code tr, code  td {
+  border: none;
+}
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */
+</style>
+<script async custom-element="amp-auto-ads"
+src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+</head>
+
+<body id="to-top">
+    <!-- Sprite svg -->
+  <svg width="0" height="0" class="hidden">
+    <symbol aria-hidden="true" data-prefix="fas" data-icon="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+      id="bars-solid">
+      <path fill="currentColor"
+        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+      </path>
+    </symbol>
+      <symbol aria-hidden="true" data-prefix="fab" data-icon="facebook-f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="facebook-f-brands">
+    <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+  </symbol>
+      <symbol aria-hidden="true" data-prefix="fab" data-icon="twitter" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512" id="twitter-brands">
+        <path fill="currentColor"
+          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+        </path>
+      </symbol>
+        <symbol aria-hidden="true" data-prefix="fas" data-icon="envelope" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512" id="envelope-solid">
+          <path fill="currentColor"
+            d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+          </path>
+        </symbol>
+        <symbol aria-hidden="true" data-prefix="fab" data-icon="telegram-plane" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512" id="telegram-plane-brands">
+          <path fill="currentColor"
+            d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
+          </path>
+        </symbol>
+          <symbol aria-hidden="true" data-prefix="fas" data-icon="caret-up" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512" id="caret-up-solid">
+            <path fill="currentColor"
+              d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z">
+            </path>
+          </symbol>
+  </svg>
+  <!-- Start header  =================================== -->
+  <header class="navigation__container">
+    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="icon__bars">
+  <svg class="icon-bars">
+    <use xlink:href="#bars-solid"></use>
+  </svg>
+  </div>
+  <a title="Home" href="https://en.laptrinhbanthan.com">
+  <amp-img class="logo" src="https://laptrinhbanthan.com/assets/img/laptrinhbanthandotcom-noel.png" width="211.333px" height="40px">
+  </amp-img></a>
+  </header>
+
+
+  <!-- Start Sidebar -->
+<amp-sidebar id="header-sidebar" class="ampstart-sidebar px3  " layout="nodisplay">
+  <nav>
+     <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
+     <div class="list--navigation">
+       <a title="Linux" href="https://en.laptrinhbanthan.com/linux/">Linux</a>
+       <a title="Window" href="https://en.laptrinhbanthan.com/window/">Window</a>
+       <a title="Learn programming" href="https://en.laptrinhbanthan.com/hoc-lap-trinh/">Learn programming</a>
+       <a title="Tricks" href="https://en.laptrinhbanthan.com/thu-thuat/">Tricks</a>
+       <a title="Life style" href="https://en.laptrinhbanthan.com/phong-cach-song/">Life style</a>
+     </div>
+  </nav>
+</amp-sidebar>
+
+  <article class="blog__post">
+    <header class="hero__image">
+      <figure>
+        <amp-img src="https://en.laptrinhbanthan.com/assets/img/hack-facebook-cover.jpg"
+        height="630"
+        width="1200"
+        layout="responsive"
+          alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit">
+        </amp-img>
+        <figcaption class="des__post">
+        <h1><a title="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit" href="https://en.laptrinhbanthan.com//linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.html">Instructions for hacking Facebook accounts with Ngrok and SEtoolkit</a></h1>
+        
+        <span class="post__author">By <a title="Author" href="https://www.facebook.com/truongduongg99" target="_blank">Nam Truong</a></span>
+        <time class="post__date" datetime="2019-02-06T00:00:00-05:00">06-02-2019</time>
+         
+		<span class="read-time">4 minutes read</span>
+        </figcaption>
+      </figure>
+    </header>
+    <div class="blog__content">
+      <amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-8283643926060521"
+     data-ad-slot="2320908758"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+  <ol class="danger">
+	<li>Everything in this post is educational only.</li>
+	<li>I will not be responsible if you use them to violate the law.</li>
+</ol>
+
+<p class="first-letter"><strong>Hello everyone, today I will guide you to hack any account with SEtookit and Ngrok extremely simple. In this article, I show you how to do it on the Linux operating system, so the requirement is that your computer must have any distro of Linux installed. For example: I am using Kali linux to guide you.</strong></p>
+
+<p>If you do not know what the Linux operating system is, please stop reading this article to learn and install it first.</p>
+
+<p>You can refer to the Kali linux Operating System <a rel="noopener" title="https://kali.org" target="_blank" href="https://kali.org">here</a>.</p>
+
+<amp-img src="https://en.laptrinhbanthan.com/assets/img/kali-linux.jpg" alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Ảnh 1" layout="responsive" width="640" height="361"></amp-img>
+
+<h2 id="attack-outside-the-internet">Attack outside the Internet</h2>
+
+<p>I often get questions like: <em>Why can’t I use Metasploit outside of LAN? , What if you want to attack a target outside the Internet?…</em> And the general answer to this problem is Port Foward (port redirection). Why is port redirection needed to reach targets outside the internet?</p>
+
+<p>Understandably, Port Forward means port redirection of service. In a LAN, computers with the same network layer do not have to redirect. In addition to the Internet, which means going through a router, Port forward is a feature of the router that allows us to configure redirection of data from outside the Internet to the IP address of a device in the LAN.</p>
+
+<amp-img src="https://en.laptrinhbanthan.com/assets/img/hack-facebook-1.jpg" alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Ảnh 2" layout="responsive" width="599" height="229"></amp-img>
+
+<p>For example, imagine that if you’re in the house, room A (device A) wants to find room B (device B), it’s simple, not having to go through the main door (router). As for outsiders (Internet) who want to find Mr. A, they must definitely go through the main door, if we do not set up Port forward, it will be considered as a closed door. And setting Port forward as a sign, Mr. A’s room number is 192.168.1.105, so the customer who went to find the room has the same number. But if I can’t find it, it’s because the signage is wrong.</p>
+
+<p>So in summary we have 2 problems, in order for data outside the internet to request to our device, we must configure the port forward and configure the correct IP address of the device.</p>
+
+<h2 id="ngrok-tunnel---port-forwards-solution">Ngrok Tunnel - Port Forward’s solution</h2>
+
+<p>For different routers, the configuration of Port forward is also different, and in addition, you need to have access to configure it. That’s annoying, so we have to find a more convenient solution. And the answer is Ngrok. Can understand ngrok is a way to replace the Port forward function of the router.</p>
+
+<p>Ngrok is a reverse proxy that allows internet users outside your network to access your localhost. Because it stands in the middle of the connection, it can record parameters and support you many other intervention functions such as analysis, log, repeate request … Ngork is written in Go. Currently, the ngrok homepage provides us with a lot of Plan for different needs, but we only need to use the Free package. Because Ngrok is written in Go, it can compile for many different operating systems.</p>
+
+<h2 id="what-to-use-setoolkit-for">What to use SEtoolkit for?</h2>
+
+<p>Ngrok helps you out of the Lan network, we need to have something more to store. To do this, you can use <a rel="noopener" target="_blank" title="https://github.com/trustedsec/social-engineer-toolkit" href="https://github.com/trustedsec/social-engineer-toolkit">Setoolkit</a> (Social Engineering Toolkit), developed by Dave kennedy <a rel="noopener" title="https://twitter.com/hackingdave" target="_blank" href="https://twitter.com/hackingdave">@hackingdave</a>. Host your phishing pages using Apache &amp; php. If you don’t want to do complicated things, then you will try this great automated tool called <a rel="noopener" title="https://github.com/UndeadSec/SocialFish" target="_blank" href="https://github.com/UndeadSec/SocialFish">SocialPhish</a>. I got straight to the point. By the way, this attack is Social Phishing. So once you do the above, you can only have 50% of success in your hand because it needs soft skills. I give you a qoute:</p>
+
+<p style="text-align: center; font-style: italic;">"To become a good programmer, hard skills are not enough."</p>
+
+<p>The soft skill here is how you have to communicate to make Victim (the target) believe and follow you. Then you can carry out your evil intentions next.</p>
+
+<h3 id="step-1-download-and-register-for-an-account">Step 1. Download and register for an account</h3>
+
+<p>You access and download Ngrok <a rel="noopener" target="_blank" title="https://ngrok.com/download" href="https://ngrok.com/download">here</a>.</p>
+
+<amp-img src="https://en.laptrinhbanthan.com/assets/img/hack-facebook-3.jpg" alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Ảnh 3" layout="responsive" width="760" height="408"></amp-img>
+
+<p>As mentioned above, depending on the operating system, there are different executable files. Here I use <strong>Kali Linux 64bit</strong> so I will choose <strong>Download for Linux</strong> (It is recommended already).</p>
+
+<h3 id="step-2-extract-the-file">Step 2. Extract the File</h3>
+
+<p>After downloading will be File named <strong>ngrok-stable-linux-amd64.zip</strong>. Please extract it.</p>
+
+<p>Next we get the ngrok file. Please copy it to this link: <strong>/usr/bin</strong>.</p>
+
+<p>Step 3. Practice</p>
+
+<p>Alright, follow me. You open Terminal and then type:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span>ngrok</code></pre></figure>
+
+<p>We will open a Tunnel into port 80 to run SEtoolkit:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span>ngrok http 80</code></pre></figure>
+
+<p>Continue to SEtoolkit again is complete, this is already integrated on Linux Kali then should not have to install anything. You open a further Terminal Tab and then type the following command:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>setoolkit</code></pre></figure>
+
+<p>Enter your password to grant root access.</p>
+
+<p>Select 1) <strong>Social – Engineering Attacks</strong>. Command:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">set</span><span class="o">&gt;</span>1</code></pre></figure>
+
+<p>Select 2) <strong>Website Attack Vectors</strong>. Command:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">set</span><span class="o">&gt;</span>2</code></pre></figure>
+
+<p>Select 3) <strong>Credential Browser Exploit Method</strong>. Command:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">set</span><span class="o">&gt;</span>3</code></pre></figure>
+
+<p>Select <strong>2) Site Cloner</strong>. Command:</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="nb">set</span>:webattack&gt;2</code></pre></figure>
+
+<p>Then you go back to that Terminal Tab. You look up the <strong>Forwarding</strong> line . Then copy the Ngrok website that we created randomly to us.</p>
+
+<p>For example: Mine is <strong>7f5e136c.ngrok.io</strong> then I copy it and paste it into the other terminal as shown below</p>
+
+<amp-img src="https://en.laptrinhbanthan.com/assets/img/hack-facebook-4-min.jpg" alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Ảnh 4" layout="responsive" width="600" height="512"></amp-img>
+
+<p>Come on, it’s almost done 😃😃. At this step, you enter the website you want to fake on your own.</p>
+
+<p>For example, if I want to hack my Facebook account, I would type in: <strong>https://www.facebook.com</strong>. (see image below)</p>
+
+<amp-img src="https://en.laptrinhbanthan.com/assets/img/hack-facebook-5-min.jpg" alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Ảnh 5" layout="responsive" width="600" height="208"></amp-img>
+
+<p>Already. Done, now you go to the link shortened page such as <a rel="noopener" href="https://bitly.com" title="https://bitly.com" target="_blank">bit.ly</a>:</p>
+
+<p>The purpose of this work is to create beautiful links to avoid being suspected.</p>
+
+<h3 id="the-end">The end</h3>
+
+<p>Now take that link to reach Victim. Generally convince it how to put it on that link to login. Whether it succeeds or not is up to you. You have good soft skills are good.</p>
+
+<p>And the problem of knowing Victim on your Website or not, you go back to the Terminal SEtoolkit tab just now to see. Remember not to turn off any Tab. Each link only exists within 7 hours. After 7 hours the link will die or you close all the Terminal it will also turn off.</p>
+
+<amp-img src="https://en.laptrinhbanthan.com/assets/img/hack-facebook-6.jpg" alt="Instructions for hacking Facebook accounts with Ngrok and SEtoolkit - Ảnh 6" layout="responsive" width="600" height="208"></amp-img>
+
+<p>If Victim sticks, you will get the same result. hi 😝</p>
+
+<p>I wish you success!</p>
+
+  <amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-8283643926060521"
+     data-ad-slot="2320908758"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+<br>
+  
+  
+  
+  
+  <span>Categories: <a title="Linux" class="category__blog" href="https://en.laptrinhbanthan.com/linux">Linux</a></span>
+  
+  
+  
+  
+  
+  
+  
+  
+  <br><br>
+    <span class="keyword__blog">Keywords: </span>
+    
+    
+    
+    
+    
+    
+    
+    <a title="Hack Facebook account" class="tags" href="https://en.laptrinhbanthan.com/tag/hack-tai-khoan-facebook">Hack Facebook account</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  </article>
+  <div class="blog__related">
+    <h2>Related Posts</h2>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <aside class="share__bars">
+    <a target="_blank" rel="noopener" aria-label="Chia sẻ Faebook" class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html" title="Chia sẻ lên Facebook">
+      <svg>
+        <use xlink:href="#facebook-f-brands">
+      </svg></a>
+    <a target="_blank" rel="noopener" aria-label="Chia sẻ Twitter" class="tt" href="https://twitter.com/intent/tweet?text=Instructions for hacking Facebook accounts with Ngrok and SEtoolkit&url=https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html" title="Chia sẻ lên Twitter">
+      <svg>
+        <use xlink:href="#twitter-brands">
+      </svg></a>
+    <a target="_blank" rel="noopener" aria-label="Chia sẻ Gmail" class="em" href="mailto:?subject=Instructions for hacking Facebook accounts with Ngrok and SEtoolkit&amp;body=Chia sẻ đến bạn trang web hay và thú vị này https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html" title="Chia sẻ qua Email">
+      <svg>
+        <use xlink:href="#envelope-solid">
+      </svg></a>
+    <a target="_blank" rel="noopener" aria-label="Chia sẻ Telegram" class="tl" href="https://telegram.me/share/url?url=https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.amp.html&text=Instructions for hacking Facebook accounts with Ngrok and SEtoolkit" title="Chia sẻ qua Telegram">
+      <svg>
+        <use xlink:href="#telegram-plane-brands">
+      </svg></a>
+  </aside>
+  <div class="comment__blog">
+  <a title="Leave a comment" href="https://en.laptrinhbanthan.com//linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.html#binh-luan">Comments</a>
+  </div>
+
+  <footer class="blog__footer">
+    <span>&copy; 2020 <a class="copyright__blog" title="Home" href="https://laptrinhbanthan.com">Lap Trinh Ban
+        Than</a>. All rights reserved.</span>
+    <span>Copyright &copy; 2020 Lap Trinh Ban Than.com. Any copy of content from this site must be agreed upon by the author.</span>
+  </footer>
+  <amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-8283643926060521">
+</amp-auto-ads>
+</body>
+<a class="to-top" title="Go to top" aria-label="Go to top" href="#to-top">
+  <svg>
+    <use xlink:href="#caret-up-solid">
+  </svg>
+</a>
+</html>

@@ -1,0 +1,250 @@
+[
+  
+    {
+
+      "title"    : "5 ways to reverse a string in JavaScript",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/5-cach-dao-nguoc-chuoi-trong-javascript.html",
+      "category" : "Learn programming",
+      "tags"     : "JavaScript, Algorithm",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thu-thach-thuat-toan-javascript.jpg",
+      "excerpt"  : "The algorithm reverses a string in JavaScript. Algorithm challenge"
+
+    } ,
+  
+    {
+
+      "title"    : "Handling conflicts in Git with rebasing or merging",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/xu-ly-xung-dot-trong-git.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "xu-ly-xung-dot-trong-git.jpg",
+      "excerpt"  : "How to handle conflicts in Git with rebasing or merging, Choose rebasing or merging?. Git proficient series"
+
+    } ,
+  
+    {
+
+      "title"    : "Teamwork via Git",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/lam-viec-nhom-qua-git.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "git.jpg",
+      "excerpt"  : "How to teamwork with many people via Git. Git proficient series"
+
+    } ,
+  
+    {
+
+      "title"    : "Introducing .gitignore",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/gitignore.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "What is .gitignore? How to use .gitignore? Git proficiency series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 7",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-7.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "Git revert. Git proficiency series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 6",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-6.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "Git checkout and git reset. Git proficiency series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 5",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-5.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "Branching &amp; Merging. Git proficiency series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 4",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-4.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "The terms Working dir, Staging area, Repository. Git proficient series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 3",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-3.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "Git log, Git show and Git diff. Git proficient series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 2",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-2.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "Start a new Git repository with some basic commands. Git proficient series"
+
+    } ,
+  
+    {
+
+      "title"    : "Proficiency in Git part 1",
+      "url"      : "https://en.laptrinhbanthan.com/hoc-lap-trinh/thanh-thao-git-phan-1.html",
+      "category" : "Learn programming",
+      "tags"     : "Git",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "thanh-thao-git.jpg",
+      "excerpt"  : "Install Git on Linux Operating System. Git proficient series"
+
+    } ,
+  
+    {
+
+      "title"    : "Block Window updates permanently",
+      "url"      : "https://en.laptrinhbanthan.com/window/chan-cap-nhat-window-vinh-vien.html",
+      "category" : "Window",
+      "tags"     : "Block updates",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "chan-cap-nhat-window.jpg",
+      "excerpt"  : "Some ways to block Window updates permanently, simply and easily by anyone."
+
+    } ,
+  
+    {
+
+      "title"    : "Package Sublime Text 3 for Front End developer",
+      "url"      : "https://en.laptrinhbanthan.com/thu-thuat/package-sublime-text-3-cho-dan-front-end.html",
+      "category" : "Tricks",
+      "tags"     : "Sublime Text, Front End",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "package-cho-sublime-text-3.jpg",
+      "excerpt"  : "Summary of Packages for Sublime Text 3 to help you accelerate web development process."
+
+    } ,
+  
+    {
+
+      "title"    : "Setup Visual Studio Code and Extensions for Front End Developer",
+      "url"      : "https://en.laptrinhbanthan.com/thu-thuat/thiet-lap-visual-studio-code-va-extensions-danh-cho-dan-front-end.html",
+      "category" : "Tricks",
+      "tags"     : "Front End, Extensions, Visual Studio Code",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "vs-code-cover.jpg",
+      "excerpt"  : "How to setup basic Visual Studio Code and install Extensions for Front End developer. Quickly embarked on his project"
+
+    } ,
+  
+    {
+
+      "title"    : "Confided after the protection of the junior internship subject",
+      "url"      : "https://en.laptrinhbanthan.com/phong-cach-song/tam-su-sau-khi-bao-ve-mon-thuc-tap.html",
+      "category" : "Life style",
+      "tags"     : "Talk, Mining University, Intership",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "tam-su-thuc-tap-tin-hoc.jpg",
+      "excerpt"  : "So I just finished the last course of 2019 at my beloved school. I packed up and got ready to go home, I miss my parents so much."
+
+    } ,
+  
+    {
+
+      "title"    : "Instructions for hacking Facebook accounts with Ngrok and SEtoolkit",
+      "url"      : "https://en.laptrinhbanthan.com/linux/huong-dan-hack-tai-khoan-facebook-voi-ngrok-va-setoolkit.html",
+      "category" : "Linux",
+      "tags"     : "Hack Facebook account",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "hack-facebook-cover.jpg",
+      "excerpt"  : "This is the first technique in your Hacktips series, this guide makes it possible to hack any social account"
+
+    } ,
+  
+    {
+
+      "title"    : "Create dozens of Gmail accounts on 1 phone number",
+      "url"      : "https://en.laptrinhbanthan.com/thu-thuat/tao-hang-chuc-tai-khoan-gmail-tren-1-so-dien-thoai.html",
+      "category" : "Tricks",
+      "tags"     : "Bulk Email creation",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "gmail-cover.jpg",
+      "excerpt"  : "Currently Gmail only allows creating up to 5 Gmail accounts on 1 phone number this tip will help you overcome that limit"
+
+    } ,
+  
+    {
+
+      "title"    : "Instructions to unlock Facebook",
+      "url"      : "https://en.laptrinhbanthan.com/thu-thuat/huong-dan-mo-khoa-facebook-toan-tap.html",
+      "category" : "Tricks",
+      "tags"     : "Unlock Facebook",
+      "date"     : "2020-02-12",
+      "author"   : "Nam Truong",
+      "image"    : "mo-khoa-facebook-cover.jpg",
+      "excerpt"  : "We have been locked Facebook a few times. Don&#39;t worry and take a look at this full Facebook unlock guide..."
+
+    } ,
+  
+    {
+
+      "title"    : "How to rename Facebook a word in 2018",
+      "url"      : "https://en.laptrinhbanthan.com/thu-thuat/social/cach-doi-ten-facebook-mot-chu-nam-2018.html",
+      "category" : "Tricks",
+      "tags"     : "How to change the name, Change facebook name, Facebook name a word",
+      "date"     : "",
+      "author"   : "Nam Truong",
+      "image"    : "doi-ten-facebook.jpg",
+      "excerpt"  : "This is the easiest way to get a one-word Facebook name in 2018, anyone can do it, I checked through and succeeded..."
+
+    } 
+  
+]
